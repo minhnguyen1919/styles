@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+	.loop-posts {
+		.two-article {
+			margin-bottom: em(20, $base-size);
+			.cover-content-blog {
+				.title {
+					margin: em(20, 20) em(10, 20) em(15, 20);
+					min-height: em(25, 20);
+				}
+				.desc {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,175 @@
+/* position
+-------------------------------*/
+%relative {
+  position: relative;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%fixed {
+  position: fixed;
+}
+/* text
+-------------------------------*/
+%text-center {
+  text-align: center;
+}
+
+%text-left {
+  text-align: left;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%text-uppercase {
+  text-transform: uppercase;
+}
+
+%text-capitalize {
+  text-transform: capitalize;
+}
+
+%font-normal {
+  font-style: normal;
+}
+
+%font-italic {
+  font-style: italic;
+}
+
+%text-decoration-none {
+  text-decoration: none;
+}
+
+/* display
+-------------------------------*/
+
+%none {
+  display: none;
+}
+
+%block {
+  display: block;
+}
+
+%inline {
+  display: inline;
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%table-layout {
+  table-layout: fixed;
+}
+
+%table {
+  display: table;
+}
+
+%table-cell {
+  display: table-cell;
+}
+
+%verticle-top {
+  vertical-align: top;
+}
+
+%verticle-middle {
+  vertical-align: middle;
+}
+
+%verticle-bottom {
+  vertical-align: bottom;
+}
+
+%visibility-hidden {
+  visibility: hidden;
+}
+
+%visibility-visible {
+  visibility: visible;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+/* overflow
+-------------------------------*/
+%overflow-hidden {
+  overflow: hidden;
+}
+
+%overflow-visible {
+  overflow: visible;
+}
+
+%text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+%bg-size-contain {
+  background-size: contain;
+}
+
+%bg-repeat {
+  background-repeat: repeat;
+}
+
+%bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+%bg-transparent {
+  background-color: transparent;
+}
+
+%bg-position-center {
+  background-position: center center;
+}
+
+%bg-position-50 {
+  background-position: 50% 50%;
+}
+
+%bg-size-100 {
+  background-size: 100% 100%;
+}
+
+/* Float
+------------------------------*/
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+%float-none {
+  float: none;
+}
+
+/* Margin
+-------------------------------*/
+%margin-center {
+  margin: 0 auto;
+}
+
+/* List
+-------------------------------*/
+%list-style-type-none {
+  list-style-type: none;
+}
+
+/* Clear
+-------------------------------*/
+%clear-both {
+  clear: both;
+}

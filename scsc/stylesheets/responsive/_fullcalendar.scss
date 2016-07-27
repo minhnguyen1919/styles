@@ -1,0 +1,124 @@
+@media (max-width: 768px) {
+  .fc-ltr .fc-basic-view .fc-day-number {
+    font-size: 1.5em;
+  }
+  .fc-toolbar {
+    h2 {
+      font-size: 1.5em;
+      margin-top:0.1em;
+    }
+  }  
+  .fc {
+    margin-bottom: em(40, $base-size);
+  }
+  .fc-month-view {
+    .fc-body {
+      .fc-row {
+        min-height: auto;
+      }
+    }
+  }
+  .fc-day-grid-container {
+    height: auto!important;
+  }
+}
+@media (max-width: 480px) {
+  .fc-toolbar {
+    h2 {
+      font-size: 1.2em;
+      margin-top:0.4em;
+    }
+    .fc-left {
+      min-width: auto;
+    }
+  }
+  .fc-month-view {
+    .fc-week {
+      &.fc-widget-content {
+        height:auto !important;
+        padding-bottom: 0.5em;
+        &:last-child {
+          padding-bottom: 1.5em;
+        }
+      }
+    }
+    .fc-body {
+      .fc-row {
+        min-height: auto;
+      }
+    }
+  }
+  .fc-basicWeek-view {
+    .fc-week {
+      &.fc-widget-content {
+        height:4em!important;
+      }
+      .fc-bg {
+        td {
+          &.fc-widget-content {
+            .week-day-wrapper {
+              height: auto!important;
+              .week-header-wrapper {
+                font-size: 0.75em;
+              }
+              .day-of-week {
+                font-size: 1.5em!important;
+                margin-bottom:0.15em;
+              }
+              &:after {
+                margin:0.5em 0 0.3125em -0.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 361px) and (max-width: 414px) {
+  .fc-toolbar {
+    h2 {
+      font-size: 1em;
+      margin-top:0.3em;
+    }
+  }
+}
+@media (min-width: 321px) and (max-width: 360px) {
+  .fc-toolbar {
+    h2 {
+      font-size: 0.8em;
+      margin-top:0.6em;
+    }
+    .fc-center {
+      margin-left:-2em;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .fc-toolbar {
+    h2 {
+      font-size: 0.875em;
+      margin-top:0.7em;
+    }
+    .fc-left {
+      min-width: auto;
+    }
+  }
+  .fc-month-view {
+    .fc-week {
+      &.fc-widget-content {
+        height:2.875em !important;
+        padding-bottom: 0.5em;
+        &:last-child {
+          padding-bottom: 1.5em;
+        }
+      }
+    }
+    .fc-body {
+      .fc-row {
+        min-height: auto;
+      }
+    }
+  }
+}
+

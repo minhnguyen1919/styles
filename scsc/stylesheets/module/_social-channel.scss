@@ -1,0 +1,23 @@
+.social-list {
+  color: $dark-gray-text;
+  font-size: em(13, $base-size);
+  margin: em(30, 13) 0 em(20, 13) 0;
+  .title {
+    margin-bottom: em(20, 13);
+  }
+  .social-icons {
+    span {
+      margin-right: em(15, 13);
+      a {
+        color: $icon-social;
+        padding: em(14, 13);
+        i {
+          font-size: em(20, 12);
+        }
+        &:hover {
+          color: $purple;
+        }
+      }
+    }
+  }
+}

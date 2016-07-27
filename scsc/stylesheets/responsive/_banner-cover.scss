@@ -1,0 +1,24 @@
+@media (max-width: 768px) {
+	.banner-cover {
+		margin: 0 em(-15, $base-size) em(20, $base-size);
+	}
+	.lifestyle-nav {
+		display: none;
+	}
+}
+@media (max-width: 480px) {
+	.banner-cover {
+		.text {
+			font-size: em(24, $base-size);
+			top:calc(50% - 0.625em);
+		}
+	}
+}
+@media (width: 320px) {
+	.banner-cover {
+		.text {
+			font-size: em(18, $base-size);
+			top:calc(50% - 0.4166666666666667em);
+		}
+	}
+}

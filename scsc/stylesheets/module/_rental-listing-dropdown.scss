@@ -1,0 +1,71 @@
+.rental-listing-wrapper {
+  .rental-control-wrapper {
+    margin: 0 em(40, $base-size);
+    .rental-dropdown-wrapper {
+      @extend %clear-both;
+      .rental-city-dropdown {
+        padding-left:0;
+      }
+      .neighborhood-dropdown {
+        padding-right:0;
+      }
+    }
+    .view-all-listings {
+      padding: 0;
+      .view-all-listings-link {
+        @extend %block;
+        padding: em(4, 15) 0;
+        letter-spacing: em(1,15);
+      }
+    }
+  }
+  .dropdown {
+    background-color: $purple;
+    @extend %text-center;
+    .dropdown-wrapper {
+      border: em(1, $base-size);
+      min-width: em(150, $base-size);
+      @extend %relative;
+      .btn-dropdown {
+        letter-spacing: em(-0.5, 13);
+        background: url("../images/icons/dropdown-arrow-white.png") no-repeat;
+        background-position: 97% 50%;
+        @extend %relative;
+        left: 0;
+        z-index: 9999999;
+        padding-right: em(10, 13);
+        @include text(em(13, $base-size), 400, $gotham, $white);
+        background-color: transparent;
+        padding: em(5, 13) em(12, 13);
+        width: 100%;
+        @extend %text-uppercase;
+        display:inline-block;
+        width: em(150, 13);
+        white-space: nowrap;
+        overflow:hidden !important;
+        text-overflow: ellipsis;
+        border: em(1, 13) solid $white;
+      }
+    }
+  }
+  ul.dropdown-menu {
+    z-index: 999999;
+    font-size: em(13, $base-size);
+    min-width: em(150, 13);
+    max-width: em(150, 13);
+    margin-top: em(-1, 13);
+    left: 0;
+    opacity: 1;
+    border: em(1, 13) solid $white;
+    background-color: $purple;
+    outline: em(10, 13) solid $purple;
+    .dropdown-item {
+      @include rental-dropdown();
+      &:hover {
+        background-color: $white;
+        color: $purple;
+      }
+    }
+  }
+}
+

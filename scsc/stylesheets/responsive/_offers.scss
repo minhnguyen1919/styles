@@ -1,0 +1,103 @@
+@media (max-width: 768px) {
+	.offers {
+		font-size: 75%;
+		.resident-offers, .leasing-offers {
+			margin: em(20, $base-size) 0 em(50, $base-size);
+			.cover-content {
+				.title {
+					font-size: em(32, $base-size);
+				}
+			}
+		}
+		.featured-resident-offers {
+			margin:em(20, $base-size) 0 0;
+			.featured-resident-offers-content {
+				padding:em(25, $base-size) em(35, $base-size) em(35, $base-size);
+				width:100%;
+				display: block;
+				.title {
+					font-size: em(32, $base-size);
+				}
+				.desc {
+					margin:em(10, $base-size) 0 em(60, $base-size);
+				}
+			}
+			.featured-resident-offers-img {
+				display: none;
+				&.mobile {
+					display: block;
+					width:100%;
+					img {
+						border-radius: em(3, $base-size) em(3, $base-size) 0 0;
+					}
+				}
+			}
+		}
+		.normal-resident-offers {
+			border:0;
+			.cover-normal-resident-offers {
+				margin-top: em(20, $base-size);
+				border: 1px #d3d3d3 solid;
+				border-radius: em(3, $base-size);
+				.normal-resident-offers-content {
+					padding:em(60, $base-size) em(35, $base-size) em(35, $base-size);
+					width:100%;
+					display: block;
+					.title {
+						font-size: em(28, $base-size);
+					}
+					.desc {
+						margin:em(10, $base-size) 0 em(60, $base-size);
+					}
+				}
+				.normal-resident-offers-img {
+					display: block;
+					width:100%;
+					&.mobile {
+						display: block;
+						width:100%;
+						img {
+							border-radius: em(3, $base-size) em(3, $base-size) 0 0;
+						}
+					}
+					&.desktop {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (width: 320px) {
+	.offers {
+		.resident-offers, .leasing-offers {
+			.cover-content {
+				padding: em(20, $base-size);
+				.title {
+					font-size: 2em;
+				}
+				.link {
+					clear:both;
+					margin:em(20, 16) 0 em(40, 16);
+				}
+			}
+		}
+		.featured-resident-offers {
+			.featured-resident-offers-content {
+				.title {
+					font-size: 2em;
+				}
+			}
+		}
+		.normal-resident-offers {
+			.cover-normal-resident-offers {
+				.normal-resident-offers-content {
+					.title {
+						font-size: 2em;
+					}
+				}
+			}
+		}
+	}
+}

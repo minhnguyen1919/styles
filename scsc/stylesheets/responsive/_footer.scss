@@ -1,0 +1,242 @@
+@media (max-width: 768px) {
+  #footer {
+    font-size: 75%;
+  	text-align: center;
+    padding: em(50, $base-size);
+  	.social-list {
+  		margin: em(10, 13);
+      .title {
+        font-size: em(32, 13);
+        margin-top:em(40, 32);
+      }
+      .social-icons {
+        span {
+          margin-right: em(60, 13);
+          &:last-child {
+            margin-right:0!important;
+          }
+          a {
+            i {
+              font-size: em(64, 12);
+            }
+          }
+        }
+      }
+  	}
+  	.links {
+  		.title {
+  			margin: em(60, 30) 0 em(30, 30)!important;
+        font-size: em(30, 12);
+  		}
+    ul {
+      li {
+        margin-bottom: em(24, 12);
+        a {
+          font-size: em(24, 12);
+        }
+      }
+    }
+  	}
+  	.newsletter {
+  		.title {
+  			margin: em(60, 30) 0 em(40, 30);
+        font-size: em(30, 12);
+		  }
+      .search-description {
+        font-size: em(24, 12);
+        text-align: center;
+      }
+		  .form {
+		  	margin: em(40, 12) 0 em(20, 12);
+		  }
+      .search-form {
+        .search-box {
+          font-size: em(24, 12);
+          width:calc(100% - 6.25em);
+          @include border-radius(0);
+        }
+        .search-submit {
+          font-size: em(24, 12);
+          padding:em(13, 24) 0;
+          @include border-radius(0);
+        }
+        .mc4wp-alert {
+          p {
+            font-size: em(18, 12);
+          }
+        }
+      }
+  	}
+    .logo-footer {
+      a {
+        background-size:em(181, 9) em(43, 9);
+        background-position: center center;
+        height: em(43, 9);
+        width: em(181, 9);
+      }
+    }
+    .copyright-list {
+      li {
+        a {
+          font-size: em(18, 12);
+          font-weight:400;
+        }
+      }
+    }
+    .copyright-text {
+      font-size: em(18, 12);
+      font-weight:400;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #footer {
+    text-align: center;
+    padding: em(30, $base-size) em(20, $base-size) em(20, $base-size);
+    .social-list {
+      margin: 0;
+      .title {
+        font-size: em(26, 13);
+      }
+      .social-icons {
+        span {
+          margin-right: em(45, 13) !important;
+          a {
+            i {
+              font-size: em(45, 12);
+            }
+          }
+        }
+      }
+    }
+    .links {
+      .title {
+        margin-top: em(60, 20)!important;
+        font-size: em(24, 12);
+      }
+    ul {
+      li {
+        margin-bottom: em(24, 12);
+        a {
+          font-size: em(20, 12);
+        }
+      }
+    }
+    }
+    .newsletter {
+      .title {
+        margin: em(40, 20) 0 em(10, 20);
+        font-size: em(24, 12);
+      }
+      .search-description {
+        font-size: em(18, 12);
+        text-align: center;
+      }
+      .form {
+        margin: em(40, 12) 0 em(20, 12);
+      }
+      .search-form {
+        margin: em(40, 12) 0;
+        .search-box {
+          font-size: em(18, 12);
+          width:calc(100% - 6.25em);
+        }
+        .search-submit {
+          font-size: em(18, 12);
+          padding:em(9, 18) 0;
+        }
+        .mc4wp-alert {
+          p {
+            font-size: em(14, 12);
+          }
+        }
+      }
+    }
+    .copyright-list {
+      li {
+        a {
+          font-size: em(14, 12);
+        }
+      }
+    }
+    .copyright-text {
+      font-size: em(14, 12);
+    }
+  }
+}
+
+@media (width: 320px) {
+  #footer {
+    text-align: center;
+    padding: em(30, $base-size) em(20, $base-size) em(20, $base-size);
+    .social-list {
+      margin: 0;
+      .title {
+        font-size: em(22, 13);
+        margin-top:em(10, 16);
+      }
+      .social-icons {
+        span {
+          margin-right: em(24, 13) !important;
+          a {
+            i {
+              font-size: em(36, 12);
+            }
+          }
+        }
+      }
+    }
+    .links {
+      .title {
+        font-size: em(20, 12);
+      }
+    ul {
+      li {
+        margin-bottom: em(24, 12);
+        a {
+          font-size: em(18, 12);
+        }
+      }
+    }
+    }
+    .newsletter {
+      .title {
+        font-size: em(20, 12);
+      }
+      .search-description {
+        font-size: em(16, 12);
+        text-align: center;
+      }
+      .form {
+        margin: em(30, 12) 0 em(20, 12);
+      }
+      .search-form {
+        margin: em(40, 12) 0;
+        .search-box {
+          font-size: em(12, 12);
+          width:calc(100% - 6.5em);
+        }
+        .search-submit {
+          font-size: em(12, 12);
+          padding:em(5, 12) 0;
+        }
+        .mc4wp-alert {
+          p {
+            font-size: em(12, 12);
+          }
+        }
+      }
+    }
+    .copyright-list {
+      li {
+        a {
+          font-size: em(12, 12);
+        }
+      }
+    }
+    .copyright-text {
+      font-size: em(12, 12);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.portfolio-cover-banner {
+	margin-bottom:em(45, $base-size);
+	@extend %relative;
+	.text {
+		bottom: em(20, $base-size);
+		color: $white;
+		left: em(20, $base-size);
+		@extend %absolute;
+		.title {
+			font-size: em(16, $base-size);
+			font-family: $hoefler, serif;
+			font-weight: 700;
+			letter-spacing: em(2, $base-size);
+			@extend %text-uppercase;
+		}
+		.desc {
+			font-size: em(30, $base-size);
+		}
+	}
+}
+.loop-porfolio {
+	margin: 0 em(-8, $base-size);
+	.portfolio-article {
+		margin-bottom: em(40, $base-size);
+		min-height: em(365, $base-size);
+		.cover-img-blog {
+			margin-bottom: em(20, $base-size);
+			@extend %relative;
+			.category {
+			    background: $white;
+			    color: $purple;
+			    font-size: em(10, $base-size);
+			    font-weight: 900;
+			    height: em(25, 10);
+			    letter-spacing: em(2, $base-size);
+			    margin: -2.5em auto 0;
+			    padding-top: em(8, 10);
+			    @extend %relative;
+			    @extend %text-uppercase;
+			    width: em(170, 10);
+				a {
+					color:$purple;
+					&:hover, &:focus {
+						color:$link-hover;
+					}
+				}
+			}
+		}
+		.cover-content-blog {
+			.title {
+				font-family: $hoefler, serif;
+				font-size: em(20, $base-size);
+	    		font-weight: 600;
+				letter-spacing: em(2, $base-size);
+				line-height: 1.2;
+				margin-bottom: em(20, $base-size);
+				a {
+					color:$black-text;
+					&:hover, &:focus {
+						color:$dark-gray-text;
+					}
+				}
+			}
+		}
+	}
+}

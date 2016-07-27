@@ -1,0 +1,141 @@
+@mixin button() {
+  background: $white;
+  border: 2px $purple solid;
+  color: $purple;
+  @extend %inline-block;
+  @extend %text-center;
+  @extend %cursor-pointer;
+  @extend %text-uppercase;
+  // font-size: em(13, $base-size);
+  font-weight: 700;
+  &:hover, &:focus {
+    background: $purple;
+    color: $white;
+    @extend %text-decoration-none;
+  }
+}
+@mixin block-margin-both-sides() {
+  margin-left: em(20, $base-size);
+  margin-right: em(20, $base-size);
+}
+@mixin border () {
+  border: em(1, $base-size) solid $block-border;
+}
+@mixin block-title {
+  color: $purple;
+  @extend %text-uppercase;
+  font-size: em(13, $base-size);
+  font-family: $gotham;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@mixin select-city-name {
+  @extend %text-uppercase;
+  @extend %bg-transparent;
+  @extend %text-center;
+  border: 0;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /*Safari and Chrome*/
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+@mixin featured-listing-detail($font-size, $font-weight) {
+  color: $white;
+  @extend %text-uppercase;
+  font-size: $font-size;
+  font-family: $gotham;
+  font-weight: $font-weight;
+}
+@mixin view-all-listing() {
+  color: $light-gray-text;
+  @extend %text-uppercase;
+  font-size: em(11, $base-size);
+  @extend %text-center;
+  font-weight: 700;
+  font-family: $gotham;
+  &:hover {
+    color: $dark-gray-text;
+  }
+}
+@mixin block-space {
+  margin-bottom: em(30, $base-size);
+}
+@mixin event-category-name {
+  color: $purple;
+  font-weight: 400;
+  font-family: $gotham;
+  @extend %text-uppercase;
+  font-size: em(13, $base-size);
+}
+@mixin event-name {
+  color: $black-text;
+  font-weight: 400;
+  font-family: $gotham;
+  @extend %text-capitalize;
+  font-size: em(16, $base-size);
+  line-height: em(24, $base-size);
+}
+@mixin event-detail {
+  color: $light-gray-text;
+  font-weight: 400;
+  font-family: $gotham;
+  @extend %text-capitalize;
+  @extend %font-italic;
+  font-size: em(14, $base-size);
+  letter-spacing: em(-0.5, $base-size);
+}
+@mixin rental-dropdown {
+  @extend %text-center;
+  @extend %text-uppercase;
+  color: $white;
+  font-size: em(13, 13);
+  font-family: $gotham;
+  font-weight: 400;
+  padding: em(5,$base-size) 0;
+  background-color: $purple;
+  opacity: 1;
+  @extend %cursor-pointer;
+}
+@mixin text($font-size, $font-weight, $font-family, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: $font-family;
+  color: $color;
+}
+@mixin bg-cover(){
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// fluid mixins
+@mixin img-fluid-wrapper($padding-bottom) {
+  @extend %relative;
+  @extend %bg-position-center;
+  padding-bottom: $padding-bottom;
+  height: 0;
+}
+
+@mixin img-fluid() {
+  @extend %absolute;
+  @extend %bg-position-center;
+  @include bg-cover();
+  @include square(100%);
+  top:0;
+  left:0;
+}
+@mixin image-rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}

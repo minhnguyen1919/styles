@@ -1,0 +1,73 @@
+.carousel-cover {
+	.interSlider {
+		margin-bottom: em(15, $base-size);
+		.interSlider__item {
+			@extend %relative;
+			.interSlider__item-fluid {
+				@include img-fluid-wrapper(38.33333333333333%);
+			}
+			.text {
+				bottom: em(20, $base-size);
+				color: $white;
+				left: em(20, $base-size);
+				@extend %absolute;
+				.title {
+					font-size: em(16, $base-size);
+					font-family: $hoefler, serif;
+					font-weight: 700;
+					letter-spacing: em(2, $base-size);
+					@extend %text-uppercase;
+				}
+				.desc {
+					font-size: em(30, $base-size);
+					a {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+	.contentSlider {
+		margin:0;
+		margin-bottom: em(40, $base-size);
+		padding: 0 em(20, $base-size);
+		.contentSlider__item {
+			cursor: pointer;
+			.progressBar {
+				background:$progressBar;
+				width:100%;
+				.bar {
+					background:$bar;
+					height: em(2, $base-size);
+					max-width:100%;
+					width:0%;
+				}
+			}
+			.text {
+				color:$light-gray-text;
+				.title {
+					font-size: em(13, $base-size);
+					font-weight: 700;
+					letter-spacing: em(2, $base-size);
+					margin-bottom: em(10, $base-size);
+					margin-top: em(6, $base-size);
+					text-transform: uppercase;
+				}
+				.desc {
+					font-size: em(14, $base-size);
+					font-family: 'Hoefler Titling A', 'Hoefler Titling B', serif;
+					font-weight: 600;
+					letter-spacing: em(2, $base-size);
+				}
+				&.active {
+					.title {
+						color:$purple;
+					}
+					.desc {
+						color:$dark-gray-text;
+					}
+				}
+			}
+		}
+	}
+}

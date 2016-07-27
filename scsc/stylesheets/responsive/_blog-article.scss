@@ -1,0 +1,134 @@
+@media screen and (max-width: 768px) {
+  .banner-cover-article {
+    margin: 0 em(-15, $base-size);
+  }
+  .blog-article-cover-hero {
+    margin: 0 em(-15, $base-size);
+  }
+  .blog-article-content {
+    margin: em(58, $base-size) 0 0;
+    padding: 0;
+    .cover-list {
+      display: flex;
+      flex-flow: column;
+      .number {
+        order: 1;
+      }
+      .title {
+        order: 2;
+      }
+      .content {
+        order: 3;
+      }
+      .cover-img {
+        order: 4;
+      }
+      figure {
+        order: 5;
+      }
+    }
+    .fluid-width-video-wrapper {
+      margin-left: em(-15, $base-size);
+      margin-right: em(-15, $base-size);
+      width: auto;
+    }
+    .category {
+      font-family: $hoefler;
+    }
+    .desc {
+      font-size: em(20, $base-size);
+    }
+    figure {
+      max-width: 100%;
+    }
+    .cover-social {
+      padding: em(100, $base-size) 0 em(80, $base-size) 0;
+      .link, .share-social {
+        float: none;
+        text-align: center;
+        width: 100%;
+        .share-label {
+          padding-right: em(28, $base-size);
+        }
+        span {
+          padding-right: em(50, 13);
+          margin: 0;
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+      .link {
+        margin-bottom: em(50, $base-size);
+        a:last-child {
+          padding-right: 0;
+          margin-right: 0;
+        }
+        a {
+          margin-right: em(20, 11);
+          padding-right: em(20, 11);
+        }
+      }
+      .share-label {
+        color: $purple;
+        text-transform: uppercase;
+        font-style: italic;
+        display: inline !important;
+        font-family: $hoefler;
+        font-weight: 700;
+      }
+    }
+    .cover-list-wrapper {
+      .cover-list {
+        .cover-img {
+          float: none;
+          padding: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cover-blog-article-related {
+    .cover-title {
+      padding: em(31, 22) 0 em(14, 22);
+    }
+    .blog-article-related {
+      .cover-img-blog {
+        margin: em(20, $base-size) 0;
+      }
+      .icon-share {
+        padding-bottom: em(10, $base-size);
+        background-position-y: 0;
+      }
+    }
+  }
+  #footer {
+    .social-list {
+      .title {
+        font-weight: 700;
+      }
+      .social-icons {
+        span {
+          padding-right: em(6, $base-size);
+        }
+      }
+    }
+    .newsletter {
+      .search-description {
+        text-align: center;
+        color: $dark-gray-text;
+        font-family: $gotham;
+      }
+    }
+    .copyright-list {
+      li {
+        text-decoration: underline;
+      }
+    }
+  }
+  .cover-content-blog {
+    .title {
+      margin-bottom:em(16, 20);
+    }
+  }
+}

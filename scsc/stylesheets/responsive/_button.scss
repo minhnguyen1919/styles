@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+	.btn-get-ticket {
+		font-size: em(16, $base-size);
+		width: em(150, 16);
+	}
+}
+@media (max-width: 480px) {
+	.btn-get-ticket {
+		font-size: em(14, $base-size);
+		width: em(130, 14);
+	}
+}
+@media (width: 320px) {
+	.btn-next-ten-stories {
+		margin-bottom: em(60, $base-size);
+		padding: em(12, 14) em(36, 14);
+	}
+	.btn-offers {
+		bottom:em(-25, $base-size);
+		margin-left:em(20, 14);
+		width: calc(100% - 40px);
+	}
+}

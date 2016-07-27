@@ -1,0 +1,71 @@
+.featured-listings-wrapper, .upcoming-event-wrapper {
+  width: 100%;
+  .btn-dropdown {
+    width: em(215, $base-size);
+    @extend %block;
+    margin: 0 auto;
+    @include select-city-name();
+    @include text(em(16, $base-size), 300, $gotham, $light-gray-text);
+    background: url("../images/icons/dropdown-arrow-gray.png") no-repeat;
+    background-position: 92% 50%;
+    padding: em(5, $base-size) em(26, $base-size);
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+  }
+  .dropdown-menu {
+    font-size: em(16, $base-size);
+    top: em(60, $base-size);
+    z-index: 99999;
+    background-color: $white;
+    opacity: 1;
+    border: em(1, 16) solid $block-border;
+    left: 50%;
+    margin-left: em(-107.5, 16);
+    min-width: em(215, 16) !important;
+    max-width: em(215, 16) !important;
+    padding: em(7, 14) 0;
+    @extend %absolute;
+    &::before {
+      border-width: em(1,14) em(1,14) 0 0;
+      border-color: $block-border;
+      border-style: solid;
+      width: em(8,$base-size);
+      height: em(8,$base-size);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      content: '';
+      position: absolute;
+      top: em(-5,$base-size);
+      right: em(17,14);
+      background-color: $white;
+      border-bottom-color: $white;
+      border-left-color: $white;
+    }
+    .dropdown-item {
+      @include text(em(16, 16), 300, $gotham, $light-gray-text);
+      line-height: em(18, 16);
+      @extend %text-center;
+      @extend %bg-transparent;
+      @extend %text-uppercase;
+      @extend %cursor-pointer;
+      padding: em(5, 16) em(34, 16);
+      &:first-child {
+        margin-top: em(7,16);
+      }
+      &:hover {
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+  .dropdown-menu:after {
+    @extend %absolute;
+    top: 1px;
+    margin-left: -10px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: #fff;
+  }
+}

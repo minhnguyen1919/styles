@@ -1,0 +1,19 @@
+.left-sidebar {
+  padding-right: em(2, $base-size);
+  padding-left: em(22, $base-size);
+}
+.left-sidebar {
+  .col-md-12 {
+    padding: 0;
+  }
+  .widget {
+    @include border();
+    @extend %overflow-hidden;
+    @include border-radius(em(5, $base-size));
+    @include block-space();
+    .block-title {
+      @include block-title();
+      @extend %text-center;
+    }
+  }
+}

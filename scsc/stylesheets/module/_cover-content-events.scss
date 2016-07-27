@@ -1,0 +1,276 @@
+.events-cover-banner {
+  margin-bottom:em(45, $base-size);
+  @extend %relative;
+  .events-cover-banner-fluid {
+    @include img-fluid-wrapper(38.33333333333333%);
+  }
+  .text {
+    bottom: em(20, $base-size);
+    color: $white;
+    left: em(20, $base-size);
+    @extend %absolute;
+    .title {
+      font-size: em(16, $base-size);
+      font-family: $hoefler, serif;
+      font-weight: 700;
+      letter-spacing: em(2, $base-size);
+      @extend %text-uppercase;
+    }
+    .desc {
+      font-size: em(30, $base-size);
+    }
+  }
+}
+.cover-content-events {
+  .event-thumbnail {
+    border: 1px $block-border solid;
+    border-top:0;
+    width:100%;
+    @extend %relative;
+    @extend %float-left;
+    min-height:em(300, $base-size);
+    .pageloader {
+      z-index: 100;
+      @extend %absolute;
+      .spinner {
+        @extend %absolute;
+        left:0;
+        right:0;
+        top: em(160, $base-size);
+      }
+    }
+    .cover-event-thumbnail {
+      @extend %float-none;
+      @extend %table;
+      width:100%;
+      .event-thumbnail-content {
+        @extend %float-none;
+        padding:0 em(20, $base-size);
+        width:50%;
+        @extend %table-cell;
+        @extend %verticle-middle;
+        .category {
+          color:$purple;
+          font-size: em(11, $base-size);
+          font-weight: 700;
+          @extend %text-uppercase;
+          a {
+            color:$purple;
+            &:hover, &:focus {
+              color:$link-hover;
+            }
+          }
+        }
+        .title {
+          font-family: $hoefler, serif;
+          font-size: em(24, $base-size);
+          a {
+            color:$black-text;
+            &:hover, &:focus {
+              color:$dark-gray-text;
+            }
+          }
+        }
+        .time {
+          color: $light-gray-text;
+          margin:em(10, $base-size) 0 em(20, $base-size);
+          font-size: em(14, $base-size);
+          font-weight: 300;
+          @extend %font-italic;
+        }
+        .desc {
+          color: $block-border;
+          font-size: em(10, $base-size);
+          font-weight: 400;
+          letter-spacing: em(2, $base-size);
+          margin-top:em(20, 10);
+          text-transform: uppercase;
+          .text {
+            display: inline-block;
+          }
+          .icon-share {
+            background: url(../images/icons/icon-share.png) no-repeat left em(4, $base-size);
+            cursor: pointer;
+            margin-top:em(10, $base-size);
+            padding:em(4, 10) 0 em(4, 10) 0;
+            .dropdown-toggle {
+              padding:em(4, 10) 0 em(4, 10) em(20, 10);
+            }
+          }
+        }
+      }
+      .event-thumbnail-img {
+        @extend %float-none;
+        @extend %table-cell;
+        @extend %verticle-middle;
+        width:50%;
+        &.mobile {
+          display: none;
+          .event-thumbnail-img-fluid {
+            @include img-fluid-wrapper(83.5509138381201%);
+            @extend %overflow-hidden;
+            .img-fluid {
+              -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+              -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+              -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+              transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+              &:hover {
+                transform: scale(1.02);
+              }
+            }
+          }
+        }
+        .event-thumbnail-img-fluid {
+          @include img-fluid-wrapper(83.5509138381201%);
+          @extend %overflow-hidden;
+          .img-fluid {
+            -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+  }
+  .event-list {
+    @extend %float-left;
+    margin-top:em(60, $base-size);
+    margin-bottom:em(36, $base-size);
+    .event-type {
+      font-size: em(13, $base-size);
+      font-weight: 700;
+      @extend %text-uppercase;
+      margin-bottom:em(20, $base-size);
+      color:$purple;
+    }
+    .cover-event-list {
+      @extend %float-left;
+      border-top: 1px $block-border solid;
+      margin-bottom:em(24, $base-size);
+      padding-top:em(24, $base-size);
+      width:100%;
+      &:nth-child(2) {
+        border-top: 0;
+        padding-top:0;
+      }
+      .event-list-content {
+        @extend %float-left;
+        padding-left:em(20, $base-size);
+        width:61.666666%;
+        .cover-time {
+          width:100%;
+          .time {
+            color: $light-gray-text;
+            font-size: em(14, $base-size);
+            font-weight: 300;
+            @extend %font-italic;
+            @extend %float-left;
+            .month-day {
+              color:$purple;
+              font-size: em(24, 14);
+              @extend %font-normal;
+              @extend %text-uppercase;
+            }
+          }
+          .get-ticket {
+            @extend %float-right;
+          }
+        }
+        .category {
+          color:$purple;
+          font-size: em(11, $base-size);
+          font-weight: 700;
+          margin:em(15, $base-size) 0 em(10, $base-size);
+          @extend %text-uppercase;
+          a {
+            color:$purple;
+            &:hover, &:focus {
+              color:$link-hover;
+            }
+          }
+        }
+        .title {
+          font-family: $hoefler, serif;
+          font-size: em(24, $base-size);
+          a {
+            color:$black-text;
+            &:hover, &:focus {
+              color:$dark-gray-text;
+            }
+          }
+        }
+        .cover-more {
+          margin-top: em(20, $base-size);
+          width:100%;
+          @extend %relative;
+          .read-more {
+            font-size: em(14, $base-size);
+            font-weight: 700;
+            @extend %text-uppercase;
+            @extend %float-left;
+            @extend %inline-block;
+            a {
+              color:$purple;
+              &:hover, &:focus {
+                color:$link-hover;
+              }
+            }
+          }
+          .share-social {
+            color: $block-border;
+            font-size: em(10, $base-size);
+            font-weight: 400;
+            letter-spacing: em(2, $base-size);
+            text-transform: uppercase;
+            @extend %float-right;
+            @extend %inline-block;
+            width: 70%;
+            .text {
+              @extend %inline-block;
+              margin-right:em(20, 10);
+            }
+            .social-icons {
+              @extend %inline-block;
+              span {
+                &:last-child {
+                  margin-right: 0;
+                }
+                a {
+                  color: $block-border;
+                  padding: em(7, 12);
+                  i {
+                    font-size: em(20, 12);
+                  }
+                  &:hover {
+                    color: $purple;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .event-list-img {
+        @extend %float-left;
+        width:38.333333%;
+        .event-list-img-fluid {
+          @include img-fluid-wrapper(68.02721088435374%);
+          @extend %overflow-hidden;
+          .img-fluid {
+            -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            &:hover {
+              transform: scale(1.02);
+            }
+          }
+        }
+      }
+    }
+  }
+}

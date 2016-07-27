@@ -1,0 +1,61 @@
+.stay-updated-block, .newsletter {
+  .email {
+    @extend %font-italic;
+  }
+  .sidebar-block-wrapper {
+    .search-box {
+      background-image: none;
+      border: em(1, 14) solid $block-border;
+      padding-left: em(15, 14);
+      font-size: em(14, $base-size);
+      height: em(40, 14);
+    }
+  }
+  .search-form {
+    .search-box {
+      background-image: none;
+      border: em(1, 16) solid $block-border;
+      padding-left: em(15, 16);
+      font-size: em(16, $base-size);
+      height: em(40, 16);
+    }
+    .search-submit {
+      @include border-radius(0);
+    }
+    .mc4wp-alert {
+      p {
+        text-transform: none;
+      }
+    }
+  }
+}
+.newsletter {
+  .mc4wp-form {
+    font-size: em(20, $base-size);
+  }
+}
+.mc4wp-response {
+  .mc4wp-alert {
+    margin-top: em(10, 20);
+  }
+  .mc4wp-success {
+    p {
+      @include text(em(16, 20), 400, $gotham, $success-message);
+      background-color: $bg-success-message;
+      padding: em(15, 16);
+      margin-bottom: em(20, 16);
+      border: 1px solid $border-success-message;
+      @include border-radius(em(4, 16));
+    }
+  }
+  .mc4wp-error {
+    p {
+      @include text(em(16, 20), 400, $gotham, $error-message);
+      background-color: $bg-error-message;
+      padding: em(15, 16);
+      margin-bottom: em(20, 16);
+      border: 1px solid $border-error-message;
+      @include border-radius(em(4, 16));
+    }
+  }
+}

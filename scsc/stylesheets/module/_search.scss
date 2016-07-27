@@ -1,0 +1,34 @@
+.widget, .no-results, .newsletter {
+  .search-description {
+    @include text(em(15, $base-size), 400, $gotham, $gray-text);
+    line-height: em(22, $base-size);
+    @extend %text-center;
+    margin-top: em(8, $base-size);
+  }
+  .search-form {
+    @extend %text-center;
+    margin: em(30, $base-size) 0 em(35, $base-size) 0;
+    @extend %relative;
+    .search-box {
+      @include border();
+      @include border-radius(0);
+      background: url("../images/icons/search.png");
+      background-repeat: no-repeat;
+      background-position: em(10,$base-size) em(10, $base-size);
+      padding-left: em(35, $base-size);
+      padding-right: em(3, $base-size);
+      width: calc(100% - 5.6em);
+      height: em(40, $base-size);
+      background-color: $footer-background;
+    }
+    .search-submit {
+      @include button();
+      @include border-radius(0);
+      width:em(82, 14);
+      font-size: em(14, $base-size);
+      padding:em(10, 14) 0;
+      vertical-align: top;
+    }
+  }
+}
+

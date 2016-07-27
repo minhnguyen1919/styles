@@ -1,0 +1,118 @@
+.loop-posts {
+  min-height: em(300, $base-size);
+  @extend %relative;
+  .pageloader {
+    z-index: 100;
+    @extend %absolute;
+    .spinner {
+      @extend %absolute;
+      left:0;
+      right:0;
+      top: em(160, $base-size);
+    }
+  }
+	.two-article {
+		margin-bottom: em(30, $base-size);
+		.cover-img-blog {
+			margin-bottom: em(20, $base-size);
+			min-height: em(93, $base-size);
+			@extend %relative;
+			.cover-img-blog-fluid {
+				border:1px transparent solid;
+				@include img-fluid-wrapper(66.25874125874126%);
+				@extend %overflow-hidden;
+				&.no-img {
+					border:1px #acacac solid;
+				}
+				.img-fluid {
+					-moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+					-o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+					-webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+					transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+					&:hover {
+						transform: scale(1.02);
+					}
+				}
+			}
+			.category {
+			    background: $white;
+			    color: $purple;
+			    font-size: em(10, $base-size);
+			    font-weight: 900;
+			    height: em(25, 10);
+			    letter-spacing: em(2, $base-size);
+			    margin: -2.5em auto 0;
+			    padding-top: em(8, 10);
+			    @extend %relative;
+			    @extend %text-uppercase;
+			    width: em(170, 10);
+				a {
+					color:$purple;
+					&:hover, &:focus {
+						color:$link-hover;
+					}
+				}
+				&.no-img {
+				    border:1px #acacac solid;
+				    border-bottom:0;
+				}
+			}
+		}
+		.cover-content-blog {
+			.title {
+				font-family: $hoefler, serif;
+				font-size: em(20, $base-size);
+	    		font-weight: 600;
+				letter-spacing: em(2, 20);
+				line-height: 1.2;
+				min-height: em(50, 20);
+				a {
+					color:$black-text;
+					&:hover, &:focus {
+						color:$dark-gray-text;
+					}
+				}
+			}
+			.desc {
+				color: $block-border;
+				font-size: em(10, $base-size);
+				font-weight: 400;
+				letter-spacing: em(2, $base-size);
+				@extend %text-uppercase;
+				.text {
+					display: inline-block;
+					margin-right:em(15, $base-size);
+				}
+				.icon-share {
+					background: url(../images/icons/icon-share.png) no-repeat left 0;
+					background-size: em(15, 10) em(15, 10);
+					cursor: pointer;
+					display: inline-block;
+					padding:em(2, 10) 0 em(2, 10) 0;
+					.dropdown-toggle {
+						padding:em(4, 10) 0 em(4, 10) em(20, 10);
+					}
+				}
+			}
+		}
+	}
+}
+.list-article-subcategory {
+  min-height: em(300, $base-size);
+  @extend %relative;
+  .pageloader {
+    z-index: 100;
+    @extend %absolute;
+    .spinner {
+      @extend %absolute;
+      left:0;
+      right:0;
+      top: em(160, $base-size);
+    }
+  }
+  .btn-next-ten-stories {
+  	display: block;
+  	padding: em(12, 14) 0;
+  	width:em(326, 14);
+  }
+}

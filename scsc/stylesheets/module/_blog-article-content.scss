@@ -1,0 +1,475 @@
+@font-face {
+  font-family: 'museo_sans300';
+  src: url('../fonts/museosans300-webfont.eot');
+  src: url('../fonts/museosans300-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/museosans300-webfont.woff2') format('woff2'),
+    url('../fonts/museosans300-webfont.woff') format('woff'),
+    url('../fonts/museosans300-webfont.ttf') format('truetype'),
+    url('../fonts/museosans300-webfont.svg#museo_sans300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.banner-cover-wrapper {
+  @include img-fluid-wrapper(20%);
+}
+.blog-article-content {
+  background: $white;
+  margin:em(-100, $base-size) em(96, $base-size) 0;
+  padding:em(40, $base-size) em(100, $base-size) em(68, $base-size);
+  .article-image-content-wrapper {
+    @include img-fluid-wrapper(56.25%);
+  }
+
+  .category {
+    @include text(em(15, $base-size), 300, $gotham, $purple);
+    @extend %text-uppercase;
+    a {
+      color: $purple;
+    }
+  }
+  .title {
+    color:$black-text;
+    font-family: $hoefler, serif;
+    font-size: em(40, $base-size);
+    font-weight: 700;
+    letter-spacing: em(2, $base-size);
+    padding: em(5, 16) 0;
+    a {
+      color:$black-text;
+    }
+  }
+  .line {
+    background:#020202;
+    height: em(2, $base-size);
+    width: em(82, $base-size);
+  }
+  .desc {
+    color: $blog-desc;
+    font-size: em(24, $base-size);
+    font-weight: 300;
+    margin-bottom:em(63, 24);
+    @extend %font-italic;
+  }
+  .content {
+    color:$blog-content;
+    line-height: 1.5em;
+    margin:em(33, $base-size) 0 em(30, $base-size);
+    a {
+      color:$purple;
+      &:hover, &:focus {
+        color:$link-hover;
+      }
+    }
+    > p {
+      margin-bottom: em(20, $base-size);
+    }
+  }
+  .cover-content {
+    .left {
+      width: 100%;
+      display:inline-block;
+      white-space: nowrap;
+      overflow:hidden !important;
+      text-overflow: ellipsis;
+    }
+  }
+  .cover-interview {
+    margin-top:em(68, $base-size);
+    width:100%;
+    .interview-row {
+      td {
+        @extend %verticle-top;
+      }
+      &:last-child {
+        td {
+          .answer-sentence, .answer-name {
+            margin-bottom:0;
+          }
+        }
+      }
+      &.question {
+        .question-name {
+          color:$black-text;
+          font-family: $hoefler, serif;
+          font-size: em(30, $base-size);
+          font-weight: 700;
+          margin-right: em(30, 30);
+          margin-bottom:em(4, 30);
+          white-space: nowrap;
+          @extend %text-uppercase;
+        }
+        .question-sentence {
+          color:$black-text;
+          font-family: $hoefler, serif;
+          font-size: em(30, $base-size);
+          font-weight: 700;
+          margin-bottom:em(4, 30);
+        }
+      }
+      &.answer {
+        .answer-name {
+          color:#808080;
+          font-family: $hoefler, serif;
+          font-size: em(30, $base-size);
+          font-weight: 700;
+          margin-right: em(30, 30);
+          margin-bottom:em(47, 30);
+          white-space: nowrap;
+          @extend %text-uppercase;
+        }
+        .answer-sentence {
+          color:$blog-content;
+          margin-top:em(14, $base-size);
+          margin-bottom:em(47, $base-size);
+        }
+      }
+    }
+  }
+  .cover-list-wrapper {
+    .cover-list {
+      margin-top:em(55, $base-size);
+      .number {
+        color: #858585;
+        font-size: em(60, $base-size);
+        font-weight: 200;
+      }
+      .title {
+        font-family: $hoefler, serif;
+        font-size: em(30, $base-size);
+        font-weight: 600;
+        padding: 0;
+        a {
+          color:$black-text;
+        }
+      }
+      .content {
+        margin:em(20, $base-size) 0;
+      }
+      .cover-content {
+        @extend %float-none;
+        .title {
+          font-family: $hoefler, serif;
+          font-size: em(30, $base-size);
+          font-weight: 600;
+          padding: 0;
+          a {
+            color:$black-text;
+          }
+        }
+        .content {
+          margin:em(20, $base-size) 0;
+          line-height: 1.5;
+        }
+      }
+      .cover-img {
+        padding:0 0 0 em(15, $base-size);
+        width: 50%;
+        @extend %float-right;
+        figure {
+          margin: 0;
+        }
+      }
+    }
+  }
+  figure {
+    margin: em(36, $base-size) 0 em(50, $base-size) 0;
+    max-width: em(768, $base-size);
+    @extend %overflow-hidden;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    figcaption {
+      @extend %font-italic;
+      @extend %text-right;
+      color: #2c2c2c;
+      font-size: em(14, $base-size);
+      font-weight: 300;
+      margin-top:em(11, $base-size);
+      max-width: 100%;
+    }
+  }
+  .cover-social {
+    border-top:1px #d3d3d3 solid;
+    margin-top:em(20, $base-size);
+    padding-top:em(20, $base-size);
+    .link {
+      color: #858585;
+      font-family: 'museo_sans300';
+      font-size: em(15, $base-size);
+      font-weight: 300;
+      width:50%;
+      @extend %text-uppercase;
+      @extend %float-left;
+      a {
+        border-right:1px #858585 solid;
+        color:$purple;
+        margin-right:em(16, $base-size);
+        padding-right:em(16, $base-size);
+        &:hover, &:focus {
+          color:$link-hover;
+        }
+        &:last-child {
+          border-right:0;
+        }
+      }
+    }
+    .share-social {
+      margin-top:em(-5, $base-size);
+      width:50%;
+      @extend %float-right;
+      @extend %text-right;
+      .social-icons {
+        @extend %inline-block;
+        .share-label {
+          @extend %none;
+        }
+        span {
+          margin-right: em(23, 16);
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            color: $purple;
+            i {
+              font-size: em(24, $base-size);
+              &.icon-email {
+                font-size: em(18, $base-size);
+                margin-top: em(3, $base-size);
+              }
+            }
+            &:hover {
+              color: $link-hover;
+            }
+          }
+        }
+        .icon-email {
+          background: url(../images/icons/email.png) no-repeat 0 0;
+          background-size: em(18, 18);
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: top;
+          @include square(em(18, 18));
+          &:hover {
+            background-position: 0 em(-19, 18);
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+}
+.text-article {
+  @extend %overflow-hidden;
+  margin:0;
+  .sub-title {
+    margin:em(30, $base-size) 0 em(20, $base-size);
+    font-size: em(18, $base-size);
+  }
+  .content {
+    line-height: 1.5;
+    span {
+      text-decoration: underline;
+      text-transform: capitalize;
+    }
+  }
+	.title {
+		font-family: $hoefler, serif;
+		font-size: em(40, $base-size);
+		font-weight: 700;
+		padding: em(5, 16) 0;
+		a {
+			color:$black-text;
+		}
+	}
+	.line {
+		background:#020202;
+		height: em(2, $base-size);
+		margin-bottom:em(30, $base-size);
+		width: em(82, $base-size);
+	}
+	.desc {
+		color: #414141;
+		font-size: em(24, $base-size);
+		font-weight: 300;
+		margin-bottom:em(30, $base-size);
+		@extend %font-italic;
+	}
+	.content {
+		margin:em(20, $base-size) 0;
+		a {
+			color:$purple;
+			&:hover, &:focus {
+				color:$link-hover;
+			}
+		}
+	}
+	.cover-interview {
+		.interview-row {
+			margin-bottom:em(45, $base-size);
+			&:last-child {
+				margin-bottom:0;
+			}
+			.question {
+				.question-name {
+					font-family: $hoefler, serif;
+					font-size: em(30, $base-size);
+					font-weight: 700;
+					width:em(80, 30);
+					@extend %float-left;
+					@extend %text-uppercase;
+				}
+				.question-sentence {
+					font-family: $hoefler, serif;
+					font-size: em(30, $base-size);
+					font-weight: 700;
+					width:calc(100% - 80px);
+					@extend %float-left;
+				}
+			}
+			.answer {
+				.answer-name {
+					color:#808080;
+					font-family: $hoefler, serif;
+					font-size: em(30, $base-size);
+					font-weight: 700;
+					width:em(80, 30);
+					@extend %float-left;
+					@extend %text-uppercase;
+				}
+				.answer-sentence {
+					margin-top:em(14, $base-size);
+					width:calc(100% - 80px);
+					@extend %float-left;
+				}
+			}
+		}
+	}
+	.cover-list-1 {
+		margin-top:em(55, $base-size);
+		.number {
+			color: #858585;
+			font-size: em(60, $base-size);
+			font-weight: 200;
+		}
+		.title {
+			font-family: $hoefler, serif;
+			font-size: em(30, $base-size);
+			font-weight: 600;
+			padding: 0;
+			a {
+				color:$black-text;
+			}
+		}
+		.content {
+			margin:em(20, $base-size) 0;
+		}
+	}
+	.cover-list-2 {
+		margin-top:em(55, $base-size);
+		.number {
+			color: #858585;
+			font-size: em(60, $base-size);
+			font-weight: 200;
+		}
+		.cover-content {
+			@extend %float-none;
+			.title {
+				font-family: $hoefler, serif;
+				font-size: em(30, $base-size);
+				font-weight: 600;
+				padding: 0;
+				a {
+					color:$black-text;
+				}
+			}
+			.content {
+				margin:em(20, $base-size) 0;
+				line-height: 1.5;
+			}
+		}
+		.cover-img {
+			padding:0 0 0 em(15, $base-size);
+			width: 50%;
+			@extend %float-right;
+			figure {
+				margin:em(10, $base-size) 0;
+			}
+		}
+	}
+	figure {
+		margin:em(30, $base-size) 0;
+		figcaption {
+			color: #2c2c2c;
+			@extend %font-italic;
+			font-size: em(14, $base-size);
+			font-weight: 300;
+			margin-top:em(5, $base-size);
+			@extend %text-right;
+		}
+	}
+	.cover-social {
+		border-top:1px #d3d3d3 solid;
+		margin-top:em(20, $base-size);
+		padding-top:em(20, $base-size);
+		.link {
+			color: #858585;
+			font-family: 'museo_sans300';
+			font-size: em(15, $base-size);
+			font-weight: 300;
+			width:50%;
+			@extend %text-uppercase;
+			@extend %float-left;
+			a {
+				border-right:1px #858585 solid;
+				color:$purple;
+				margin-right:em(16, $base-size);
+				padding-right:em(16, $base-size);
+				&:hover, &:focus {
+					color:$link-hover;
+				}
+				&:last-child {
+					border-right:0;
+				}
+			}
+		}
+	}
+}
+.share-social {
+  width:50%;
+  @extend %float-right;
+  @extend %float-left;
+  @extend %text-right;
+  .social-icons {
+    @extend %inline-block;
+    span {
+      margin-right: em(23, 16);
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        color: $purple;
+        i {
+          font-size: em(18, $base-size);
+        }
+        &:hover, &:focus {
+          color: $link-hover;
+        }
+      }
+    }
+    .share-label {
+      @extend %none;
+    }
+    .icon-email {
+      background: url(../images/icons/email.png) no-repeat left top;
+      cursor: pointer;
+      display: inline-block;
+      height: em(18, $base-size);
+      width: em(18, $base-size);
+      &:hover {
+        background-position: 0 em(-18, $base-size);
+      }
+    }
+  }
+}
+

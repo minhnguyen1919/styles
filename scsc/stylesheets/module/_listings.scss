@@ -1,0 +1,163 @@
+.listing-cover-banner {
+  margin-bottom:em(15, $base-size);
+  @extend %relative;
+  .text {
+    bottom: em(20, $base-size);
+    color: $white;
+    left: em(20, $base-size);
+    @extend %absolute;
+    .title {
+      font-size: em(16, $base-size);
+      font-family: $hoefler, serif;
+      font-weight: 700;
+      letter-spacing: em(2, $base-size);
+      @extend %text-uppercase;
+    }
+    .desc {
+      color: $white;
+      font-size: em(30, $base-size);
+    }
+  }
+  .img-hero {
+    @include img-fluid-wrapper(38.33333333333333%);
+  }
+}
+.listing-nav {
+  .row {
+    margin:0 em(5, $base-size) em(45, $base-size);
+  }
+  .location {
+    color: $light-gray-text;
+    border-top: 2px $progressBar solid;
+    font-size: em(13, $base-size);
+    font-weight: 700;
+    letter-spacing: em(2, $base-size);
+    padding: em(5, 13) 0 0;
+    @extend %text-uppercase;
+  }
+  ul {
+    li {
+      @extend %cursor-pointer;
+      &.active {
+        .location {
+          color: $purple;
+          border-top: 2px $bar solid;
+        }
+      }
+    }
+  }
+}
+.loop-listing {
+  margin: 0 em(-8, $base-size);
+  .listing-article {
+    margin-bottom: em(40, $base-size);
+    .cover-img-blog {
+      @include img-fluid-wrapper(54.1958041958042%);
+      @extend %overflow-hidden;
+      .img-fluid {
+        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+    .category {
+      background: $white;
+      color: $purple;
+      font-size: em(12, $base-size);
+      font-weight: 900;
+      height: em(25, 10);
+      letter-spacing: em(2, $base-size);
+      margin: -2.5em auto em(20, 12);
+      overflow: hidden;
+      padding:em(8, 12) em(15, 12) 0;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      @extend %relative;
+      @extend %text-uppercase;
+      width: em(180, 12);
+      a {
+        color:$purple;
+        &:hover, &:focus {
+          color:$link-hover;
+        }
+      }
+    }
+    .cover-content-blog {
+      .title {
+        font-family: $hoefler, serif;
+        font-size: em(20, $base-size);
+          font-weight: 600;
+        letter-spacing: em(2, $base-size);
+        line-height: 1.2;
+        margin-bottom: em(20, $base-size);
+        a {
+          color:$black-text;
+          &:hover, &:focus {
+            color:$dark-gray-text;
+          }
+        }
+      }
+    }
+  }
+}
+.cover-listing {
+  min-height: em(300, $base-size);
+  @extend %relative;
+  .pageloader {
+    z-index: 100;
+    @extend %absolute;
+    .spinner {
+      @extend %absolute;
+      left:0;
+      right:0;
+      top: em(160, $base-size);
+    }
+  }
+  .listing-comming-soon {
+    font-size: em(30, $base-size);
+    margin-top: em(120, 30);
+    @extend %text-center;
+  }
+  .listing-content {
+    .listings-title-block {
+      @include text(em(20, $base-size), 700, $hoefler, $bar);
+      @extend %font-italic;
+      @extend %text-uppercase;
+      border-bottom: em(3, 20) solid $bar;
+      margin-bottom: em(18, 20);
+      clear: both;
+      float: none;
+    }
+    .listing-article-wrapper {
+      .view-all-properties {
+        margin-bottom: em(65, $base-size);
+        @extend %clear-both;
+        @extend %text-center;
+        float: none;
+        .text-center {
+          @include button();
+          font-size: em(14, $base-size);
+          padding: em(13, $base-size) em(35, $base-size);
+          margin-top: em(20, 13);
+        }
+      }
+    }
+  }
+}
+.no-listing {
+  background: $white;
+  border: 2px #cacaca solid;
+  color: #cacaca;
+  @extend %inline-block;
+  @extend %text-center;
+  @extend %cursor-pointer;
+  @extend %text-uppercase;
+  font-weight: 700;
+  font-size: em(14, $base-size);
+  padding: em(2, 14) 0;
+  width: em(142, 14);
+}

@@ -1,0 +1,92 @@
+.logo {
+  @extend %table-cell;
+  @extend %verticle-middle;
+  margin: 0;
+  padding: 0 em(12, 18);
+  a {
+    outline: 0;
+    background: url(../images/logo-related-rental.png) no-repeat left top;
+    background-size:em(117, 18) em(28, 18);
+    height: em(28, 18);
+    text-indent: -9999px;
+    width: em(120, 18);
+    &.navbar-brand {
+      line-height: em(20, 36);
+      padding:0;
+    }
+  }
+}
+
+.navbar {
+  min-height: em(50, $base-size);
+  margin-bottom: 0;
+}
+.navbar-default {
+  background-color: white;
+  border-color: transparent;
+  .navbar-toggle {
+    border-color:transparent;
+    @extend %float-left;
+    margin-left: em(20, $base-size);
+    &:hover, &:focus {
+      background: transparent;
+    }
+    .icon-bar {
+      background-color: #565e67;
+      width:em(32, $base-size);
+    }
+    .icon-bar + .icon-bar {
+      margin-top:em(6, $base-size);
+    }
+  }
+}
+.navbar-default .navbar-nav>li>a {
+  color: $light-gray-text;
+  font-size: em(14, $base-size);
+  text-transform: uppercase;
+}
+.navbar-default .navbar-nav>li {
+  border-right:1px #f2f2f2 solid;
+  &:last-child {
+    border-right:0;
+  }
+}
+.resident-circle-cover {
+  padding: 0 em(15, $base-size);
+  margin:em(21, $base-size) 0;
+  a {
+    @extend %inline-block;
+    margin: 0;
+    &.resident-circle {
+      outline: 0;
+      background: url(../images/resident-circle.png) no-repeat left top;
+      height: em(38, $base-size);
+      text-indent: -9999px;
+      width: em(83, $base-size);
+    }
+  }
+}
+.navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:focus {
+  color: $dark-gray-text;
+}
+.navbar-default .navbar-nav>li.active>a, .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li.active>a:hover, .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li.active>a:focus {
+  color: $dark-gray-text;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {  
+  background-color: transparent;
+}
+.container {
+  >.navbar-collapse {
+    margin:em(25, $base-size) 0 em(22, $base-size);
+    height: em(30, $base-size)!important;
+  }
+  >.navbar-header {
+    @extend %text-center;
+    @extend %table;
+    margin:em(25, $base-size) em(15, $base-size);
+    height:em(28, $base-size);
+  }
+}
+.cover-header {
+  padding: 0 em(27, $base-size);
+}

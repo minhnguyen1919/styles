@@ -1,0 +1,12 @@
+.view-all-listings {
+  margin: em(16, $base-size) 0 em(20, $base-size);
+  @extend %text-center;
+  @extend %clear-both;
+  padding: 0;
+  .view-all-listings-link {
+    @extend %text-uppercase;
+    @include text(em(15, $base-size), 700, $gotham, $white);
+    border: em(1, 15) solid $white;
+    padding: em(8, 15) em(92.8, 15);
+  }
+}

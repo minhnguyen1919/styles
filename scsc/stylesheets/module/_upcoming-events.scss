@@ -1,0 +1,150 @@
+.upcoming-event-block {
+  .view-all-events {
+    @include view-all-listing();
+    margin-top: em(15, $base-size);
+    margin-bottom: em(12, $base-size);
+    @extend %clear-both;
+    @extend %block;
+    @extend %text-center;
+  }
+  &.widget {
+    @extend %overflow-visible;
+  }
+}
+.upcoming-event-wrapper {
+  width: 100%;
+  .upcoming-event-place {
+    display: list-item;
+    margin: 0 auto;
+    padding: 0 em(10, $base-size);
+    @include select-city-name();
+    option {
+      font-size: em(14, 16);
+      color: $light-gray-text;
+      @extend %text-center;
+      margin-top: em(12, 14);
+      padding-top: em(4, 14);
+    }
+    option:hover {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+}
+.today-event-content {
+  margin: 0 em(-20, $base-size);
+}
+.upcoming-event-cover {
+  // min-height: em(300, $base-size);
+  @extend %relative;
+  .pageloader {
+    z-index: 100;
+    @extend %absolute;
+    .spinner {
+      @extend %absolute;
+      left:0;
+      right:0;
+      top: em(40, $base-size);
+    }
+  }
+  .upcoming-event-list {
+    @extend %table;
+    width:100%;
+    .upcoming-event-item {
+      @extend %overflow-hidden;
+      padding: em(24, $base-size) 0;
+      border-top: em(1, $base-size) solid $block-border;
+      @extend %clear-both;
+      .upcoming-event-link {
+        @extend %block;
+        @extend %overflow-hidden;
+        @include square(100%);
+      }
+      .event-detail-carlendar {
+        display: table;
+        @extend %float-right;
+        background: $purple;
+        @include square(em(50, 20));
+        color: $white;
+        font-size: em(20, $base-size);
+        @extend %text-center;
+        .month-date-link {
+          @include square(100%);
+          @extend %inline-block;
+          color: $white;
+          line-height: em(28, 26);
+          span:first-child {
+            margin-top: em(5, 26);
+            @extend %inline-block;
+          }
+        }
+      }
+      .event-detail-wrapper {
+        @extend %float-left;
+        width:calc(100% - 3.5em);
+        .event-category {
+          @include event-category-name();
+        }
+        .event-name {
+          white-space:nowrap;
+          max-width:em(265, $base-size);
+          @include event-name();
+          @extend %overflow-hidden;
+          @extend %text-overflow-ellipsis;
+          a {
+            color:$black-text;
+          }
+        }
+        .event-detail {
+          @include event-detail();
+        }
+      }
+      &:last-child {
+        border-bottom: em(1, $base-size) solid $block-border;
+      }
+    }
+    .upcoming-event-no-item {
+      @include text(em(21, 21), 400, $gotham, $gray-text);
+      height:em(106, $base-size);
+      @extend %text-center;
+    }
+  }
+}
+.sidebar-block-wrapper {
+  @include block-margin-both-sides();
+}
+.sidebar-block-wrapper {
+  @extend %relative;
+  .upcoming-event-background {
+    @extend %bg-no-repeat;
+    @extend %bg-position-center;
+    @include bg-cover();
+    @include size(em(374, $base-size), em(422, $base-size));
+    .upcoming-event-background-link {
+      width: 100%;
+      height: 100%;
+      @extend %block;
+    }
+  }
+  .text {
+    color: $white;
+    bottom: em(12, $base-size);
+    left: em(20, $base-size);
+    @extend %absolute;
+    @extend %text-uppercase;
+    .title {
+      font-size: em(13, $base-size);
+    }
+    .time {
+      font-size: em(18, $base-size);
+      font-weight: 200;
+    }
+  }
+}
+.upcoming-event-content {
+  @include img-fluid-wrapper(112.8342245989305%);
+  @extend %overflow-hidden;
+  .no-upcoming-event {
+    @include text(em(16, $base-size), 400, $gotham, $gray-text);
+  }
+}

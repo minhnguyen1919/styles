@@ -1,0 +1,48 @@
+.btn-next-ten-stories {
+	@include button();
+	@extend %margin-center;
+	font-size: em(14, $base-size);
+	padding: em(12, 14) em(115, 14);
+	@extend %text-center;
+}
+.btn-sign-up {
+	@include button();
+	@extend %margin-center;
+	font-size: em(12, 12);
+	// height: em(40, 12);
+	padding: em(10.5, 12) 0;
+	vertical-align:top;
+	width: em(80, 12);
+}
+.social-follow {
+  @include button();
+  @extend %margin-center;
+  font-size: em(14, $base-size);
+  padding: em(12, $base-size) em(20, $base-size);
+  display: inline-block;
+}
+.btn-offers {
+	@include button();
+	font-size: em(14, $base-size);
+	left:0;
+	bottom:em(-20, $base-size);
+	padding: em(13, 14);
+	margin-left:em(30, 14);
+	@extend %absolute;
+	width:calc(100% - 4.285714285714286em);
+}
+.btn-view-offer, .btn-view-detail, .btn-get-ticket {
+	@include button();
+	font-size: em(14, $base-size);
+	padding: em(8, 14) 0;
+	width: em(140, 14);
+}
+.btn-contact-agent {
+	@include button();
+	font-size: em(14, $base-size);
+	padding: em(2, 14) 0;
+	width: em(142, 14);
+}
+.posts-navigation {
+	@extend %none;
+}

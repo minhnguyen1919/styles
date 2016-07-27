@@ -1,0 +1,79 @@
+body,.rental-listing-list-wrapper, .featured-list-wrapper {
+  &.loading {
+    .pageloader {
+      display: block;
+    }
+  }
+}
+.pageloader {
+  background:$white;
+  @extend %none;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  .spinner {
+    &:after, &:before {
+      content: '';
+      @extend %absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: em(30, $base-size);
+      height: em(30, $base-size);
+      border:5px solid transparent;
+      border-bottom:5px solid $black-text;
+      @include border-radius(100%);
+      @include  animation(rotate 1s linear infinite );
+    }
+    &:before{
+      width: em(40, $base-size);
+      height: em(40, $base-size);
+      @include animation-direction(reverse);
+    }
+  }
+}
+body {
+  .pageloader {
+    @extend %fixed;
+    z-index: 999999999;
+  }
+}
+.rental-listing-list-wrapper, .featured-list-wrapper {
+  .pageloader {
+    @extend %absolute;
+    z-index: 9999;
+  }
+}
+.featured-list-wrapper {
+  @extend %relative;
+  .pageloader {
+    .spinner {
+      @extend %absolute;
+      top: 40%;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+.rental-listing-list-wrapper {
+  @extend %absolute;
+  @include square(100%);
+  .pageloader {
+    border-left: em(11, $base-size) solid $purple;
+    border-right: em(11, $base-size) solid $purple;
+    @extend %relative;
+    .spinner {
+      top: em(300, $base-size);
+      left: 45%;
+      @extend %absolute;
+    }
+  }
+}
+
+//======= Keyframes =======
+@include keyframes(rotate){
+    from {@include rotate(0deg);}
+    to {@include rotate(360deg);}
+}

@@ -1,0 +1,90 @@
+.cover-blog-article-related {
+  .cover-title {
+    border-top: 1px #d3d3d3 solid;
+    font-family: $hoefler, serif;
+    font-size: em(22, $base-size);
+    font-weight: 700;
+    margin: 0 em(8, $base-size);
+    padding: em(31, 22) 0;
+    @extend %text-uppercase;
+    @extend %text-center;
+  }
+  .blog-article-related {
+    .cover-img-blog {
+      margin-bottom: em(20, $base-size);
+      @extend %relative;
+      .cover-img-blog-wrapper {
+        border: em(1, $base-size) transparent solid;
+        @include img-fluid-wrapper(66.26%);
+        @extend %overflow-hidden;
+        &.no-img {
+          border: em(1, $base-size) #acacac solid;
+        }
+        .img-fluid {
+          -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
+      }
+    }
+  }
+}
+.cover-content-blog {
+  .category {
+      color: $purple;
+      font-size: em(10, $base-size);
+      font-weight: 900;
+      letter-spacing: em(2, $base-size);
+      padding-bottom: em(8, 10);
+      @extend %relative;
+      @extend %text-uppercase;
+    a {
+      color:$purple;
+      &:hover, &:focus {
+        color:$link-hover;
+      }
+    }
+    &.no-img {
+        border:1px #acacac solid;
+        border-bottom:0;
+    }
+  }
+  .title {
+    font-family: $hoefler, serif;
+    font-size: em(20, $base-size);
+    font-weight: 600;
+    letter-spacing: em(2, 20);
+    line-height: 1.2;
+    a {
+      color:$black-text;
+      &:hover, &:focus {
+        color:$dark-gray-text;
+      }
+    }
+  }
+  .desc {
+    color: $block-border;
+    font-size: em(10, $base-size);
+    font-weight: 400;
+    letter-spacing: em(2, $base-size);
+    @extend %text-uppercase;
+    .text {
+      display: inline-block;
+      margin-right:em(15, $base-size);
+    }
+    .icon-share {
+      background: url(../images/icons/icon-share.png) no-repeat left 0;
+      background-size: em(15, 10) em(15, 10);
+      cursor: pointer;
+      display: inline-block;
+      padding:em(2, 10) 0 em(2, 10) 0;
+      .dropdown-toggle {
+        padding:em(4, 10) 0 em(4, 10) em(20, 10);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+  .cover-listing {
+    font-size: 75%;
+  }
+	.listing-cover-banner {
+    margin:0 em(-15, $base-size);
+    .text {
+      font-size: 75%;
+      bottom: auto;
+      color:black;
+      left:auto;
+      padding: em(20, $base-size) em(15, $base-size);
+      position: relative;
+      .title {
+        font-family: $gotham;
+        font-size:em(32, $base-size);
+        letter-spacing:0;
+        border-bottom:1px $block-border solid;
+        margin-bottom: em(5, $base-size);
+        padding-bottom: em(5, $base-size);
+      }
+      .desc {
+        font-size: em(24, $base-size);
+        color:black;
+      }
+    }
+	}
+	.listing-nav {
+		display: none;
+	}
+}
+@media (width: 320px) {
+  .listing-cover-banner {
+    .text {
+      .title {
+        font-size:em(20, $base-size);
+      }
+      .desc {
+        font-size:em(18, $base-size);
+        color:black;
+      }
+    }
+  }
+}

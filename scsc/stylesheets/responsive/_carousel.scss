@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  .carousel-cover {
+    .interSlider {
+      margin:0 em(-15, $base-size);
+      .interSlider__item {
+        .text {
+          font-size: 75%;
+          bottom: auto;
+          color:black;
+          left:auto;
+          padding: em(20, $base-size) em(15, $base-size) em(30, $base-size);
+          position: relative;
+          .title {
+            font-size: em(14, $base-size);
+          }
+          .desc {
+            font-size: em(24, $base-size);
+            a {
+              color:black;
+            }
+          }
+        }
+      }
+    }
+    .contentSlider {
+      display: none;
+    }
+  }
+}
+@media (width: 320px) {
+  .carousel-cover {
+    .interSlider {
+      .interSlider__item {
+        .text {
+          .title {
+            font-size: em(12, $base-size);
+          }
+          .desc {
+            font-size: em(20, $base-size);
+            a {
+              color:black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

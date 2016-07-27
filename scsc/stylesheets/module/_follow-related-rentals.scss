@@ -1,0 +1,64 @@
+.follow-related-rentals-block {
+  .social-channel-block, .instagram-block {
+    border-bottom: em(1, $base-size) solid $block-border;
+  }
+}
+.social-channel-block {
+  .social-list {
+    @extend %text-center;
+    span:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.instagram-block {
+  .instagram-photo-wrapper {
+    .col-md-6 {
+      padding:0 em(2.5, $base-size);
+    }
+    .instagram-photo-wrapper-fluid {
+      @include img-fluid-wrapper(100%);
+      margin-bottom: em(5, $base-size);
+      .img-fluid{
+        margin: em(2, $base-size);
+        padding: 0;
+        @include bg-cover();
+        @include square(100%);
+        @extend %bg-no-repeat;
+        .instagram-photo-link {
+          width: 100%;
+          height: 100%;
+          @extend %block;
+        }
+      }
+    }
+  }
+}
+.twitter-block {
+  .twitter-title {
+    margin-top: em(39, $base-size);
+  }
+  .twitter-description {
+    @extend %text-center;
+    @include text(em(14, $base-size), 400, $gotham, $black-text);
+    .twitter-hashtag {
+      color: $dark-gray-text;
+    }
+  }
+}
+.detail-social-block {
+  .social-id {
+    @extend %text-uppercase;
+    @extend %bg-transparent;
+    @extend %text-center;
+    @include text(em(16, $base-size), 200, $gotham, $light-gray-text);
+    margin: em(8, $base-size) 0 em(8, $base-size) 0;
+  }
+  .social-follow-btn {
+    @extend %text-center;
+    margin: em(20, $base-size) 0 em(30, $base-size) 0;
+  }
+  .instagram-follow-us {
+    margin-top: em(14, $base-size);
+  }
+}

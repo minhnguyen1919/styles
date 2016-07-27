@@ -1,0 +1,193 @@
+.offers {
+	.resident-offers, .leasing-offers {
+		margin-bottom: em(15, $base-size);
+		border: 1px #d3d3d3 solid;
+		border-radius: 0 0 em(3, $base-size) em(3, $base-size);
+
+		.cover-title {
+			background:$purple;
+			color: $white;
+			padding: em(15, $base-size) 0;
+			@extend %text-center;
+			@extend %text-uppercase;
+		}
+		.cover-img-offers {
+			@include img-fluid-wrapper(58.82352941176471%);
+			@extend %overflow-hidden;
+      .img-fluid {
+        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+		}
+		.cover-content {
+			border-radius:0 0 em(3, $base-size) em(3, $base-size);
+			min-height:em(300, $base-size);
+			@extend %relative;
+			padding: em(30, $base-size);
+			.featured {
+				color:$purple;
+				font-size: em(15, $base-size);
+				font-weight: 300;
+				@extend %text-uppercase;
+			}
+			.title {
+				font-family: $hoefler, serif;
+				font-size: em(40, $base-size);
+				padding: em(5, 16) 0;
+				a {
+					color:$black-text;
+				}
+			}
+			.desc {
+				color: $light-gray-text;
+				line-height:1.5em;
+			}
+			.link {
+				color:$purple;
+				font-size: em(14, $base-size);
+				font-weight: 700;
+				margin:em(20, 16) 0;
+				@extend %text-uppercase;
+				a {
+					color:$purple;
+					&:hover, &:focus {
+						color:$link-hover;
+					}
+				}
+			}
+		}
+	}
+	.featured-resident-offers {
+		border: 1px $block-border solid;
+		border-radius: em(5, $base-size);
+		margin-bottom:em(40, $base-size);
+		@extend %table;
+		.featured-resident-offers-content {
+			@extend %table-cell;
+			@extend %verticle-middle;
+			padding:0 em(35, $base-size);
+			width:50%;
+			.featured {
+				color:$purple;
+				font-size: em(15, $base-size);
+				font-weight: 300;
+				margin-bottom: em(2, 15);
+				@extend %text-uppercase;
+			}
+			.title {
+				font-family: $hoefler, serif;
+				font-size: em(40, $base-size);
+				a {
+					color:$black-text;
+				}
+			}
+			.desc {
+				color: $light-gray-text;
+				line-height: 1.5em;
+				margin:em(10, $base-size) 0 em(25, $base-size);
+			}
+		}
+		.featured-resident-offers-img {
+			@extend %table-cell;
+			@extend %verticle-middle;
+			width:50%;
+			&.mobile {
+				display: none;				
+				.featured-resident-offers-img-fluid {
+					@include img-fluid-wrapper(58.82352941176471%);
+					@extend %overflow-hidden;
+		      .img-fluid {
+		        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        &:hover {
+		          transform: scale(1.02);
+		        }
+		      }
+				}
+			}
+			.featured-resident-offers-img-fluid {
+				@include img-fluid-wrapper(58.82352941176471%);
+				@extend %overflow-hidden;
+	      .img-fluid {
+	        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	        &:hover {
+	          transform: scale(1.02);
+	        }
+	      }
+			}
+		}
+	}
+	.normal-resident-offers {
+		border: 1px $block-border solid;
+		margin-bottom: em(60, $base-size);
+		@extend %table;
+		.cover-normal-resident-offers {
+			width:100%;
+			.normal-resident-offers-content {
+				@extend %table-cell;
+				@extend %verticle-middle;
+				padding:0 em(35, $base-size);
+				width:50%;
+				.title {
+					font-family: $hoefler, serif;
+					font-size: em(34, $base-size);
+					a {
+						color:$black-text;
+					}
+				}
+				.desc {
+					color: $light-gray-text;
+					line-height: 1.5em;
+					margin:em(10, $base-size) 0 em(30, $base-size);
+				}
+			}
+			.normal-resident-offers-img {
+				@extend %table-cell;
+				@extend %verticle-middle;
+				width:50%;
+				&.mobile {
+					display: none;
+					.normal-resident-offers-img-fluid {
+						@include img-fluid-wrapper(62.06896551724138%);
+						@extend %overflow-hidden;
+			      .img-fluid {
+			        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+			        &:hover {
+			          transform: scale(1.02);
+			        }
+			      }
+					}
+				}
+				.normal-resident-offers-img-fluid {
+					@include img-fluid-wrapper(62.06896551724138%);
+					@extend %overflow-hidden;
+		      .img-fluid {
+		        -moz-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        -o-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        -webkit-transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+		        &:hover {
+		          transform: scale(1.02);
+		        }
+		      }
+				}
+			}
+		}
+	}
+}
+.row.offers {
+	margin-top:em(-18, $base-size);
+}

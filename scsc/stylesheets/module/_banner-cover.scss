@@ -1,0 +1,53 @@
+.banner-cover-article {
+  margin-bottom: em(-10, $base-size);
+}
+.banner-cover {
+  margin-bottom:em(40, $base-size);
+  @extend %relative;
+  .banner-img {
+    .banner-img-fluid {
+      @include img-fluid-wrapper(16.66666666666667%);
+    }
+  }
+  .text {
+    color:$white;
+    font-family: 'Hoefler Titling A', 'Hoefler Titling B', serif;
+    font-size:em(50, $base-size);
+    font-weight:700;
+    left:0;
+    letter-spacing: em(2, $base-size);
+    @extend %absolute;
+    @extend %text-center;
+    @extend %text-uppercase;
+    top: calc(50% - 0.6em);
+    width:100%;
+  }
+}
+.lifestyle-nav {
+  .row {
+    margin:em(-30, $base-size) em(5, $base-size) em(40, $base-size);
+  }
+  .lifestyle {
+    color: $light-gray-text;
+    border-top: 2px $progressBar solid;
+    font-size: em(13, $base-size);
+    font-weight: 700;
+    letter-spacing: em(2, $base-size);
+    padding: em(5, 13) 0 0;
+    @extend %text-uppercase;
+  }
+  ul {
+    li {
+      @extend %cursor-pointer;
+      &.active {
+        .lifestyle {
+          color: $purple;
+          border-top: 2px $bar solid;
+        }
+      }
+    }
+  }
+}
+.blog-article-cover-hero-wrapper {
+  @include img-fluid-wrapper(37.5%);
+}

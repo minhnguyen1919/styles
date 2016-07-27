@@ -1,0 +1,36 @@
+.container {
+  @extend %relative;
+  height: auto;
+}
+#mainContent {
+	padding: 0 em(20, $base-size) em(50, $base-size);
+}
+#loopTenStories {
+	margin-bottom: em(50, 16);
+	padding: 0 em(20, $base-size) 0 0;
+}
+.loading {
+  .pageloader {
+    display: block;
+  }
+}
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding: 0 em(15, $base-size);
+  width: 20%;
+  @extend %float-left;
+}
+.col-xs-15 {
+  width: 50%;
+  float: left;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
