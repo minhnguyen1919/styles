@@ -1,0 +1,105 @@
+/*screenhot slider */
+
+.screenshot {
+
+  &-parallax {
+    @include bg-responsive("bg-railway.jpg");
+    @extend %bg-no-repeat;
+    @extend %bg-position-50;
+    @extend %relative;
+  }
+
+  &--jeep {
+
+    @extend %relative;
+
+    &__image {
+      @include image("jeep.png");
+      @extend %bg-no-repeat;
+      @extend %absolute;
+      z-index: 3;
+    }
+  }
+
+  &--wrapper {
+    @include size(em(960, $base-size), em(830, $base-size));
+    @include bg-responsive("thumbnail-background.png");
+    @include background-size(100% 90%);
+    @extend %bg-no-repeat;
+    @extend %float-left;
+    margin: em(10, $base-size) auto 0;
+  }
+  .wrapper {
+    @extend %margin-center;
+    width: em(850, $base-size);
+    padding-top: em(50, $base-size);
+  }
+  .item-wrapper {
+    @include border-radius(em(10, $base-size));
+    @include box-shadow($dark-gray-background em(10,$base-size) em(17,$base-size) em(35,$base-size));
+    height: em(600, $base-size);
+    padding: em(18, $base-size) em(18, $base-size) em(54, $base-size) em(18, $base-size);
+    background-color: $thumbnail-border;
+  }
+
+  &--container {
+    @extend %overflow-hidden;
+    @extend %relative;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &--carousel {
+    .slick-arrow {
+      @extend %bg-no-repeat;
+      @extend %cursor-pointer;
+      @extend %relative;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .slick-prev {
+      @extend %float-left;
+      margin-right: em(17, $base-size);
+    }
+
+    .slick-next {
+      @extend %float-right;
+      margin-left: em(10, $base-size);
+    }
+
+    .next {
+      transform: rotate(180deg);
+    }
+
+    .gear-arrow {
+      @include bg-svg("slider-gear.svg");
+      @include square(em(142, $base-size));
+      @include background-size(100%);
+      @extend %absolute;
+      z-index: -1;
+    }
+
+    &__item {
+
+      img {
+        @extend %margin-center;
+        width: 100%;
+        color: $thumbnail-border;
+        background-color: $thumbnail-border;
+      }
+    }
+  }
+
+  &-wrapper {
+    @extend %block;
+    @extend %overflow-hidden;
+  }
+
+  &-img {
+    @extend %cursor-pointer;
+    cursor: -webkit-grab;
+  }
+}
+

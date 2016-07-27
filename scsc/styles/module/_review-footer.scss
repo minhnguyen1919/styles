@@ -1,0 +1,6 @@
+.review-footer {
+  @include bg-texture("texture.png");
+	@extend %relative;
+
+  width: 100%;
+}

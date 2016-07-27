@@ -1,0 +1,20 @@
+/* Style for background railway-review parallax */
+.review__parallax {
+  @include bg-responsive("bg-railway.jpg");
+  @extend %bg-no-repeat;
+  @extend %bg-position-50;
+}
+
+.bg-review-header {
+  @include bg-responsive("bg-review.png");
+  @extend %relative;
+  @extend %bg-no-repeat;
+  background-position: bottom center;
+
+  &--title {
+    @extend %text-center;
+    @extend %relative;
+
+    z-index: 99;
+  }
+}

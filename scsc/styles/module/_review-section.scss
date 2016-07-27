@@ -1,0 +1,46 @@
+/* review
+___________________________*/
+/* review-section
+ ---------------------------*/
+.bg-review-header {
+  &--title {
+    @include uppercase-title;
+  }
+}
+.review {
+  &__character {
+    @extend %margin-center;
+    @extend %relative;
+
+    &--tank {
+      @include bg-responsive("tank-review.png");
+      @extend %bg-no-repeat;
+      @extend %bg-size-contain;
+      @extend %absolute;
+      z-index: 3;
+    }
+  }
+  &__wrapper {
+    @extend %relative;
+
+    &--contents {
+      @extend %list-style-type-none;
+      padding: 0;
+
+      &__item {
+        @extend %clear-both;
+
+        &--medal {
+          @include bg-svg("medal.svg");
+          width: em(29, $base-size);
+          height: em(35, $base-size);
+          @extend %bg-no-repeat;
+        }
+
+        &--medal:last-child {
+          margin-right: em(20, $base-size);
+        }
+      }
+    }
+  }
+}

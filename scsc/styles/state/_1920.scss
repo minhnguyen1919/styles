@@ -1,0 +1,86 @@
+// media screen size: > 1280px
+@media screen and (min-width: 1281px) {
+
+  /* Sticky header block
+  _________________ */
+  .sticky-header {
+
+    &--border-left, &--border-right {
+      @include size(em(33, $base-size), em(82, $base-size));
+    }
+
+    &--border-right {
+      margin-left: em(-1, $base-size);
+    }
+
+    &--container {
+      height: em(82, $base-size);
+    }
+  }
+
+  /* Screenhot slider
+  ___________________*/
+  .height-parallax {
+    // height: em(900, $base-size);
+  }
+
+  .screenshot {
+
+    &--jeep {
+
+      &__image {
+        @include size(em(446, $base-size), em(448, $base-size));
+        right: em(-232, $base-size);
+        top: em(-296, $base-size);
+      }
+    }
+
+    .arrows {
+      @include square(em(84, $base-size));
+      margin: em(29, $base-size);
+    }
+  }
+
+  /* Review-section
+  _________________*/
+  .review-parallax {
+    height: em(1000, $base-size);
+    margin-top: em(-350, $base-size);
+  }
+
+  .review {
+    margin-top: em(-500, $base-size);
+  }
+}
+
+// media screen size: >= 1920px
+@media screen and (min-width: 1920px) {
+
+  /* Screenhot slider
+  __________________*/
+  .height-parallax {
+    background-size: 100%;
+  }
+
+  /* Game-description
+  ___________________*/
+  .game-description {
+    &__boss {
+      background-size: 100%;
+    }
+  }
+
+  /* Review-section
+  _________________*/
+  .bg-review-header {
+    background-size: 100% 100%;
+  }
+
+  .review-parallax {
+    background-size: 100%;
+  }
+
+  .footer-section {
+    background-size: 100% 100%;
+  }
+}

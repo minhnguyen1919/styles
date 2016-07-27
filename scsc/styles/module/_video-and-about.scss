@@ -1,0 +1,183 @@
+.video-about {
+  font-size: em(16, $base-size);
+  @include box-shadow($dark-gray-background -50px 50px 180px);
+  @include bg-texture("texture.png");
+  @extend %overflow-hidden;
+  @extend %relative;
+  border-top: em(15, $base-size) solid $section-border;
+  border-bottom: em(15, $base-size) solid $section-border;
+  z-index: 1;
+}
+
+.video {
+
+  &--wrapper {
+    @extend %relative;
+    width: em(1278, $base-size);
+    margin: 0 auto;
+  }
+
+  // &--text__wrapper {
+  //   height: em(130, $base-size);
+  //   margin-top: em(45, $base-size);
+  //   padding: 0 em(23, $base-size) 0 em(23, $base-size);
+
+  //   .biggest-text {
+  //     font-size: em(130, $base-size);
+  //     letter-spacing: em(2.5, 130);
+  //     line-height: em(107, 130);
+  //   }
+
+  //   .smallest-text {
+  //    font-size: em(37, $base-size);
+  //   }
+
+  //   .medium-text {
+  //    font-size: em(66, $base-size);
+  //   }
+
+  //   .big-text {
+  //    font-size: em(105, $base-size);
+  //    padding-top: em(7, 105);
+  //   }
+  // }
+
+  &--text__wrapper {
+    height: em(130, $base-size);
+    margin-top: em(45, $base-size);
+    padding: 0 em(23, $base-size) 0 em(23, $base-size);
+
+    .biggest-text {
+      font-size: em(119, $base-size);
+      letter-spacing: em(2, 119);
+      line-height: em(98, 119);
+    }
+
+    .smallest-text {
+     font-size: em(37, $base-size);
+     letter-spacing: em(1, $base-size);
+    }
+
+    .medium-text {
+     font-size: em(66, $base-size);
+    }
+
+    .big-text {
+     font-size: em(105, $base-size);
+     padding-top: em(7, 105);
+    }
+  }
+
+  &--text {
+    &__background {
+      @extend %float-left;
+      background-color: $black;
+      height: em(220, $base-size);
+      margin-top: em(154, $base-size);
+    }
+
+    &__content {
+      color: $yellow;
+    }
+
+    &__break-line {
+      @extend %float-left;
+      margin-top: em(-16, $base-size);
+    }
+
+    &__fight {
+      margin-top: em(-22, $base-size);
+      margin-left: em(71, $base-size);
+      font-size: em(13, $base-size);
+      letter-spacing: em(1, $base-size);
+    }
+
+    &__left {
+      @include border-bottom-left-radius(em(115, $base-size));
+      @include border-top-left-radius(em(115, $base-size));
+      // @include bg-responsive("jointhefight.png");
+      margin-right: em(9, $base-size);
+      padding-left: em(59, $base-size);
+
+      .video--text__wrapper {
+        @extend %block;
+        border-left: em(6, $base-size) solid $yellow;
+      }
+    }
+
+    &__right {
+      @extend %block;
+      @include border-top-right-radius(em(115, $base-size));
+      @include border-bottom-right-radius(em(115, $base-size));
+
+      margin-left: em(9, $base-size);
+      padding-right: em(67, $base-size);
+
+      .video--text__wrapper {
+        border-right: em(6, $base-size) solid $yellow;
+      }
+    }
+  }
+
+  &--content {
+    @extend %float-left;
+    background-color: $black;
+    border-top: em(22, $base-size) solid $black;
+    border-right: em(22, $base-size) solid $black;
+    border-left: em(22, $base-size) solid $black;
+    border-bottom: em(98, $base-size) solid $black;
+
+    .video-youtube {
+      @include size(em(642, $base-size), em(480,$base-size));
+    }
+  }
+}
+
+.soldier {
+
+  &--wrapper {
+    @include bg-soldier("soldier.png");
+    @include size(em(175, $base-size), em(280, $base-size));
+    @include background-size(100%);
+    @extend %absolute;
+    @extend %bg-no-repeat;
+
+    top: em(398, $base-size);
+    left: em(97, $base-size);
+    z-index: 99;
+  }
+}
+
+.about {
+
+  &--container {
+    clear: both;
+  }
+
+  &--wrapper {
+    text-align: center;
+    margin: em(44, $base-size) em(168, $base-size) em(85, $base-size) em(168, $base-size);
+  }
+
+  &--title {
+    font-size: em(64, $base-size);
+  }
+
+  &--text {
+    @include normal-text(normal);
+    font-size: em(22, $base-size);
+    line-height: em(30, $base-size);
+    @extend %text-center;
+
+    &__uppercase {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.join-now-animation {
+  @include animation-name("rotate");
+  @include animation-duration(1s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(1);
+}

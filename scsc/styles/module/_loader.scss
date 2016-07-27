@@ -1,0 +1,30 @@
+#page.is-hidden {
+  visibility: hidden;
+  height: 0;
+  // @extend %none;
+}
+
+#loading {
+  @include square(100%);
+  @extend %block;
+  @extend %bg-no-repeat;
+  @extend %bg-position-center;
+  @extend %absolute;
+  @extend %overflow-hidden;
+
+  z-index: 100;
+  background-color: $dark-gray-background;
+  background-image: url(../images/svg/loading.gif);
+}
+
+.image-loading {
+  @extend %absolute;
+  @extend %block;
+
+  max-width: 100%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  margin-left: em(-186, $base-size);
+  margin-top: em(-158.5, $base-size);
+}

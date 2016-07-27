@@ -1,0 +1,171 @@
+// Gear block
+.gear-wrapper {
+  @extend %relative;
+  @extend %margin-center;
+  width: em(1280, $base-size);
+  top: em(-104, $base-size);
+
+  &__left,
+  &__right {
+    @include size(em(340, $base-size), em(266, $base-size));
+    @extend %absolute;
+
+    &--big-gear {
+      @include square(em(185, $base-size));
+    }
+
+    &--medium-gear {
+      @include square(em(148, $base-size));
+    }
+
+    &--small-gear {
+      @include square(em(111, $base-size));
+    }
+  }
+  &__left {
+    left: em(-200, $base-size);
+
+    &--big-gear {
+      @extend %relative;
+      left: em(-10, $base-size);
+      top: em(6, $base-size);
+    }
+
+    &--medium-gear {
+      @extend %relative;
+      left: em(-17, $base-size);
+      top: em(7, $base-size);
+    }
+
+    &--small-gear {
+      @extend %absolute;
+      left: em(130, $base-size);
+      top: em(-56, $base-size);
+    }
+  }
+  &__right {
+    right: em(-205, $base-size);
+    top: em(8, $base-size);
+
+    &--big-gear {
+      @extend %relative;
+    }
+
+    &--medium-gear {
+      @extend %relative;
+      left: em(5, $base-size);
+      top: em(-11, $base-size);
+    }
+
+    &--small-gear {
+      @extend %absolute;
+      left: em(88, $base-size);
+      top: em(-68, $base-size);
+    }
+  }
+}
+
+/* All animation for gears*/
+.gear-animation-left-big {
+  @include animation-gear;
+  @include animation-name(Clockwise);
+  @include animation-duration(20s);
+}
+
+.gear-animation-left-medium, .gear-arrow-next {
+  @include animation-gear;
+  @include animation-name(UndoClockwise);
+  @include animation-duration(16s);
+}
+
+.gear-animation-left-small {
+  @include animation-gear;
+  @include animation-name(UndoClockwise);
+  @include animation-duration(12s);
+}
+
+.gear-animation-right-big {
+  @include animation-gear;
+  @include animation-name(UndoClockwise);
+  @include animation-duration(20s);
+}
+
+.gear-animation-right-medium, .gear-arrow-prev {
+  @include animation-gear;
+  @include animation-name(Clockwise);
+  @include animation-duration(16s);
+}
+
+.gear-animation-right-small {
+  @include animation-gear;
+  @include animation-name(Clockwise);
+  @include animation-duration(12s);
+}
+
+.gear-animation-single {
+  @include animation-gear;
+  @include animation-name(Clockwise);
+  @include animation-duration(11s);
+}
+
+// gears at introduction
+.introduction {
+  .sticky-header {
+    &--gear {
+      @extend %relative;
+      @extend %float-left;
+    }
+
+    &--gear__small {
+      &-left {
+        @extend %absolute;
+      }
+      &-right{
+        @extend %absolute;
+      }
+    }
+
+    &--gear__big {
+      &-left {
+        @extend %absolute;
+      }
+      &-right {
+        @extend %absolute;
+      }
+    }
+  }
+}
+
+/*----------------- introduction -----------------*/
+.introduction {
+  .sticky-header {
+    &--gear {
+      &__small-left, &__small-right {
+        @include square(em(38, $base-size));
+      }
+
+      &__big-left, &__big-right {
+        @include square(em(80, $base-size));
+      }
+      &__small-left {
+        left: em(-90, $base-size);
+        top: em(-2, $base-size);
+      }
+
+      &__big-left {
+        left: em(-52, $base-size);
+        margin-top: em(2, $base-size);
+      }
+
+      &__small-right {
+        left: em(55, $base-size);
+        top: em(-2, $base-size);
+      }
+
+      &__big-right {
+        left: em(-29, $base-size);
+        margin-top: em(1, $base-size);
+      }
+    }
+  }
+}

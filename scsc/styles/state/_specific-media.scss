@@ -1,0 +1,438 @@
+// media screen and min width 641px
+@media screen and (min-width : 641px) {
+  /* review-section
+   ---------------------------*/
+  .review__wrapper--contents {
+    &__item {
+      padding-top: em(14, $base-size);
+
+      &--medal {
+        float: left;
+      }
+    }
+  }
+  /*   footer-section
+   -----------------------------*/
+  .footer-section {
+    &__text__title {
+      font-size: em(44.27, $base-size);
+    }
+  }
+}
+
+// media screen and min width 769px
+@media screen and (min-width : 769px) {
+  /* Game-description */
+  .game-description {
+    &--background {
+      padding-bottom: em(35, $base-size);
+    }
+
+    // Split column for description of Game
+    .col-4 {
+      float: left;
+      width: 30%;
+    }
+
+    .title {
+      @include uppercase-title;
+      font-size: em(44.27, $base-size);
+    }
+
+    &__text {
+      padding-top: em(30, $base-size);
+
+      &--fun-challenge {
+        order: 1;
+      }
+
+      &--epic-boss-fights {
+        order: 2;
+      }
+
+      &--ton-of {
+        order: 3;
+      }
+
+      &--fun-challenge,
+      &--ton-of {
+        padding-top: em(30, $base-size);
+      }
+
+      &--fun-challenge {
+        padding-right: 2%;
+        margin-right: 2%;
+        border-right-style: dashed;
+      }
+
+      &--ton-of {
+        padding-left: 2%;
+        margin-left: 2%;
+        border-left-style: dashed;
+      }
+
+      &--epic-boss-fights {
+        text-align: center;
+        padding-top: em(12, $base-size);
+
+        &--title {
+          @include uppercase-title;
+          font-size: em(64.33, $base-size);
+        }
+      }
+    }
+  }
+}
+
+// media screen min width 961px
+@media screen and (min-width: 961px) {
+
+  /*screenhot slider */
+  .screenshot {
+
+    &--jeep {
+      width: em(1220, $base-size);
+      margin: 0 auto;
+    }
+
+    &--container {
+      width: em(1280, $base-size);
+    }
+
+    &--carousel {
+
+      .slick-arrow {
+        @include square(em(142, $base-size));
+        font-size: em(16, $base-size);
+        margin-top: em(338, $base-size);
+      }
+    }
+  }
+
+  .game-description {
+    // Split column for description of Game
+    .col-4 {
+      float: left;
+      width: 30%;
+    }
+    .title {
+      @include uppercase-title;
+      font-size: em(44.27, $base-size);
+    }
+
+    &__text {
+      &--fun-challenge {
+        order: 1;
+      }
+      &--epic-boss-fights {
+        order: 2;
+      }
+      &--ton-of {
+        order: 3;
+      }
+      &--fun-challenge,
+      &--ton-of {
+        padding-top: em(35, $base-size);
+      }
+
+      &--fun-challenge {
+        padding-right: 2%;
+        margin-right: 2%;
+        border-right-style: dashed;
+      }
+
+      &--ton-of {
+        padding-left: 2%;
+        margin-left: 2%;
+        border-left-style: dashed;
+      }
+
+      &--epic-boss-fights {
+        text-align: center;
+        padding-top: em(12, $base-size);
+
+        &--title {
+          @include uppercase-title;
+          font-size: em(64.33, $base-size);
+        }
+      }
+    }
+    &__description {
+      font-size: em(22, $base-size);
+    }
+
+    // Background for boss and boss image
+    &__boss {
+      height: em(160, $base-size);
+    }
+
+    &__image {
+      @include size(em(394, $base-size), em(372, $base-size));
+      margin-top: em(-180, $base-size);
+    }
+  }
+
+  /*-------------------- review-section --------------------*/
+
+  /* Review-section */
+  .bg-review-header {
+    height: em(130, $base-size);
+
+    &--title {
+      font-size: em(44.27, $base-size);
+      padding-top: em(90, 44.27);
+    }
+  }
+
+  .review {
+
+    &__wrapper--contents {
+      padding-top: em(60, $base-size);
+
+      &__item {
+
+        &--description {
+          font-size: em(22, $base-size);
+        }
+        &--nickname {
+          @include uppercase-text(em(22, 22), italic);
+        }
+      }
+    }
+
+    // Review character footer
+    &__character {
+      width: em(1220, $base-size);
+
+      &--tank {
+        @include size(em(670, $base-size), em(640, $base-size));
+        right: em(-200, $base-size);
+        top: em(-520, $base-size);
+      }
+    }
+  }
+  .footer-section {
+    padding-top: em(45, $base-size);
+
+    &__text {
+      padding-top: em(90, $base-size);
+      padding-bottom: em(370, $base-size);
+    }
+
+    &__text__email {
+      font-size: em(22, $base-size);
+    }
+  }
+}
+
+// media screen max width 960px
+@media screen and (max-width: 960px) {
+
+  .game-description {
+    &__description {
+      font-size: em(18, $base-size);
+    }
+  }
+  /* review-section
+   ---------------------------*/
+  .bg-review-header {
+
+    &--title {
+      font-size: em(37.63, $base-size);
+    }
+  }
+  .review__wrapper--contents {
+    &__item {
+      &--description {
+        font-size: em(18, $base-size);
+        line-height: em(24, $base-size);
+      }
+
+      &--nickname {
+        @include uppercase-text(em(18, 18), italic);
+      }
+    }
+  }
+
+  .footer-section {
+    &__text__email {
+      font-size: em(18, $base-size);
+    }
+  }
+}
+
+// media screen max width 768px
+@media screen and (max-width : 768px) {
+  .game-description {
+    // Background for boss and boss image
+    &__boss {
+      height: em(76, $base-size);
+    }
+    &__image {
+      margin-top: em(-110, $base-size);
+    }
+  }
+
+  /* Review-section */
+  .review {
+    &__tank-character {
+      display: none;
+    }
+    &__wrapper {
+      padding-top: em(18, $base-size);
+    }
+  }
+}
+
+// media screen max width 640px
+@media screen and (max-width: 640px) {
+
+  /*----------------- introduction -----------------*/
+  .introduction {
+
+    .sticky-header {
+      background: $light-black;
+      overflow: hidden;
+
+      &--border-left, &--border-right {
+        display: none;
+      }
+
+      &--gear {
+        display: none;
+      }
+    }
+
+    &--blackberry-store {
+      margin-bottom: em(10, $base-size);
+    }
+  }
+
+
+  /*-----Game-description---------*/
+  .game-description {
+
+    .title, &__description, &__text--epic-boss-fights--title {
+      text-align: center;
+    }
+
+    .title {
+      @include uppercase-title;
+      font-size: em(50, $base-size);
+      padding-top: em(20, 44.27);
+    }
+
+    &__description {
+      padding-bottom: em(30, $base-size);
+    }
+
+    &__text {
+      > div {
+        flex: 1 100%;
+      }
+
+      &--fun-challenge {
+        order: 1;
+      }
+
+      &--epic-boss-fights {
+        order: 2;
+      }
+
+      &--ton-of {
+        order: 3;
+      }
+
+      &--fun-challenge {
+        border-bottom-style: dashed;
+      }
+
+      &--ton-of {
+        border-top-style: dashed;
+      }
+
+      &--epic-boss-fights {
+        padding-top: em(15, $base-size);
+
+        &--title {
+          @include uppercase-title;
+          font-size: em(78.45, $base-size);
+        }
+      }
+    }
+
+    // Boss image
+    &__image {
+      @include size(em(296, $base-size), em(276, $base-size));
+    }
+  }
+  /* review-section
+  ______________________________________*/
+  .review {
+    &__tank-character {
+      display: none;
+    }
+
+    &__medal--list {
+      text-align: center;
+    }
+
+    &__wrapper--contents__item {
+
+      &--medal {
+        display: inline-block;
+        margin-top: em(18, $base-size);
+      }
+
+      &--medal:last-child {
+        margin-right: 0;
+      }
+
+      &--description {
+        text-align: center;
+      }
+    }
+
+    // Hidden character image
+    &__character {
+      display: none;
+    }
+  }
+
+  /* footer-section
+  __________________________________*/
+  .footer-section {
+    &__text {
+      padding-top: em(35, $base-size);
+      padding-bottom: em(350, $base-size);
+
+      &__title {
+        font-size: em(37.63, $base-size);
+      }
+    }
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1024px) {
+  /* Review-section
+  ________________*/
+  .review {
+    &__character {
+      &--tank {
+        right: em(-60, $base-size);
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) and (min-width: 480px) {
+  /* review-section*/
+  .bg-review-header {
+    @include background-size(cover);
+    height: em(100, $base-size);
+
+    &--title {
+      padding-top: em(75, 37.63);
+    }
+  }
+}

@@ -1,0 +1,123 @@
+/* position
+-------------------------------*/
+%relative {
+  position: relative;
+}
+
+%absolute {
+  position: absolute;
+}
+
+%fixed {
+  position: fixed;
+}
+/* text
+-------------------------------*/
+%text-center {
+  text-align: center;
+}
+
+%text-left {
+  text-align: left;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%text-uppercase {
+  text-transform: uppercase;
+}
+
+%text-decoration-none {
+  text-decoration: none;
+}
+
+/* display
+-------------------------------*/
+
+%none {
+  display: none;
+}
+
+%block {
+  display: block;
+}
+
+%inline {
+  display: inline;
+}
+
+%visibility-hidden {
+  visibility: hidden;
+}
+
+%visibility-visible {
+  visibility: visible;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+/* overflow
+-------------------------------*/
+%overflow-hidden {
+  overflow: hidden;
+}
+
+%bg-size-contain {
+  background-size: contain;
+}
+
+%bg-repeat {
+  background-repeat: repeat;
+}
+
+%bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+%bg-attachment-fixed {
+  background-attachment: fixed;
+}
+
+%bg-position-center {
+  background-position: center center;
+}
+
+%bg-position-50 {
+  background-position: 50% 50%;
+}
+
+%bg-size-100 {
+  background-size: 100% 100%;
+}
+
+/* Float
+------------------------------*/
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+/* Margin
+-------------------------------*/
+%margin-center {
+  margin: 0 auto;
+}
+
+/* List
+-------------------------------*/
+%list-style-type-none {
+  list-style-type: none;
+}
+
+/* Clear
+-------------------------------*/
+%clear-both {
+  clear: both;
+}

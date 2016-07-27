@@ -1,0 +1,196 @@
+// Media screen size: 641px - 768px
+@media (min-width: 641px) and (max-width: 768px) {
+
+  .introduction, .video-about, .screenshot {
+    font-size: em(8, $base-size);
+  }
+
+  /*----------------- introduction -----------------*/
+  .introduction {
+
+    .sticky-header {
+
+      &--container {
+        height: em(42, 8);
+      }
+
+      &--border-left, &--border-right {
+        @include size(em(16, 8), em(42, 8));
+      }
+
+      &--border-right {
+        margin-left: em(-1, 12);
+      }
+
+      &--text {
+        font-size: em(60, $base-size);
+        line-height: em(50, 60);
+        padding: em(20,60) em(24,60) em(14,60) em(6,60);
+      }
+    }
+  }
+
+  .video--text__content {
+
+    .biggest-text {
+      line-height: em(7.5, 8);
+    }
+
+    .medium-text {
+      margin-top: em(-10, 66);
+      margin-left: em(-5, 66);
+    }
+  }
+
+  .about {
+    &--title {
+      font-size: em(45, 8);
+    }
+
+    &--text {
+      font-size: em(17, 8);
+    }
+
+    &--wrapper {
+      margin-left: em(60, 17);
+      margin-right: em(60, 17);
+    }
+  }
+
+  .screenshot {
+
+    &--jeep {
+      top: em(72, $base-size);
+
+      &__image {
+        @include size(em(224, 8), em(302, 8));
+        right: em(-80, 8);
+        top: em(-245, 8);
+      }
+    }
+
+     &--container {
+      width: em(642, 8);
+    }
+
+
+    .slick-arrow{
+      margin-top: em(165, 8);
+    }
+
+    .arrows {
+      @include square(em(43, 8));
+      margin: em(14, 8);
+    }
+  }
+
+  /*----------------- game-description -----------------*/
+  .game-description {
+
+    // &__margin {
+    //   margin-top: em(-120, $base-size);
+    // }
+
+    &--background {
+      padding-bottom: em(35, $base-size);
+    }
+    // Split column for description of Game
+    .title {
+      @include uppercase-title;
+      font-size: em(38, 14);
+    }
+
+    &__text {
+      padding-top: em(20, $base-size);
+
+      &--fun-challenge {
+        order: 1;
+      }
+
+      &--epic-boss-fights {
+        order: 3;
+      }
+
+      &--ton-of {
+        order: 2;
+      }
+
+      &--fun-challenge,
+      &--ton-of {
+        width: 45%;
+        float: left;
+      }
+
+      &--fun-challenge {
+        padding-right: 4%;
+        margin-right: 4%;
+        border-right-style: dashed;
+      }
+
+      &--epic-boss-fights {
+        text-align: center;
+
+        &--title {
+          @include uppercase-title;
+          font-size: em(45, 14);
+          padding-top: em(10, $base-size);
+        }
+
+        .game-description__description {
+          text-align: center;
+          font-size: em(17, $base-size);
+        }
+      }
+    }
+
+    // Boss image
+    &__image {
+      @include size(em(296, $base-size), em(306, $base-size));
+    }
+  }
+
+  /* Review-section */
+  .review__parallax {
+    &--height {
+      height: em(500, $base-size);
+      margin-top: em(-300, $base-size);
+    }
+  }
+
+  .review-parallax {
+    height: em(700, $base-size);
+    margin-top: em(-420, $base-size);
+  }
+
+  .review {
+    margin-top: em(-200, $base-size);
+
+    &__character {
+      width: em(750, $base-size);
+
+      &--tank {
+        @include size(em(338, $base-size), em(326, $base-size));
+        right: em(-85, $base-size);
+        top: em(-275, $base-size);
+      }
+    }
+    .bg-review-header {
+      margin-bottom: em(-2, $base-size);
+    }
+  }
+  /*   footer-section
+   -----------------------------*/
+  .footer-section {
+    @include background-size(cover);
+
+    &__text {
+      padding-bottom: em(350, $base-size);
+      padding-top: em(50, $base-size);
+    }
+  }
+
+  // bg railway-review
+  .bg-railway-review__parallax {
+    height: em(700, $base-size);
+  }
+}

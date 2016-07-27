@@ -1,0 +1,27 @@
+.title {
+  @include uppercase-title;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.game-description__description {
+  @include normal-text(normal);
+  text-align: justify;
+}
+
+.review__wrapper--contents {
+  &__item {
+    &--description {
+      @include normal-text(italic);
+    }
+    &--nickname {
+      @include uppercase-text(em(20, 20), italic);
+    }
+  }
+}
+
+.footer-section {
+  &__text__email {
+    @include normal-text(normal);
+  }
+}

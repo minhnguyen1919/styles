@@ -1,0 +1,70 @@
+// media screen size: 961px - 1280px
+@media screen and (max-width: 1280px) and (min-width: 961px) {
+  .introduction, .video-about, .screenshot {
+    font-size: em(12, $base-size);
+  }
+
+  .sticky-header {
+
+    &--border-left, &--border-right {
+      @include size(em(25, 12), em(62, 12));
+    }
+
+    &--container{
+      height: em(62, 12);
+    }
+
+    &--border-right {
+      margin-left: em(-1, 12);
+    }
+  }
+
+  /*screenhot slider */
+  .height-parallax {
+    // height: em(750, $base-size);
+    // margin-top: em(-160, $base-size);
+    // padding-top: em(160, $base-size);
+  }
+
+  .screenshot {
+
+    &--jeep {
+
+      &__image {
+        @include size(em(446, 12), em(448, 12));
+        right: em(-307, 12);
+        top: em(-325, 12);
+      }
+    }
+
+    .arrows {
+      @include square(em(64, 12));
+      margin: em(21.1, 12);
+    }
+  }
+
+  .about--wrapper {
+    font-size: em(20, $base-size);
+    margin-left: em(130, $base-size);
+    margin-right: em(130, $base-size);
+  }
+  .game-description__margin {
+    // margin-top: em(-130, $base-size);
+  }
+
+   /* Review-section */
+  .review__parallax {
+    &--height {
+      height: em(550, $base-size);
+      margin-top: em(-340, $base-size);
+    }
+  }
+  .review-parallax {
+    height: em(900, $base-size);
+    margin-top: em(-500, $base-size);
+  }
+
+  .review {
+    margin-top: em(-200, $base-size);
+  }
+}

@@ -1,0 +1,143 @@
+// Media screen size: 769px - 960px
+@media (min-width: 769px) and (max-width: 960px) {
+
+  .introduction, .video-about, .screenshot, .screenshot-popup {
+    font-size: em(10, $base-size);
+  }
+  /*----------------- introduction -----------------*/
+  .introduction {
+
+    .sticky-header {
+
+      &--border-left, &--border-right {
+        @include size(em(21, 10), em(52, 10));
+      }
+
+      &--container {
+        height: em(52, 10);
+      }
+
+      &--border-right {
+        margin-left: em(-1, 12);
+      }
+    }
+  }
+
+  .about {
+
+    &--title {
+      font-size: em(50, 10);
+    }
+
+    &--text {
+      font-size: em(18, 10);
+    }
+  }
+
+
+  /*screenhot slider */
+  .height-parallax {
+    // height: em(690, $base-size);
+    // margin-top: em(-155, $base-size);
+    // padding-top: em(155, $base-size);
+  }
+
+  .screenshot {
+
+    &--jeep {
+
+      &__image {
+        @include size(em(295, 10), em(337, 10));
+        right: em(-116, 10);
+        top: em(-38, 10);
+      }
+    }
+
+    .slick-arrow{
+      margin-top: em(205, 10);
+    }
+
+    &--container {
+      width: em(800, 10);
+    }
+
+    .arrows {
+      @include square(em(53, 10));
+      margin: em(18, 10);
+    }
+  }
+
+  .game-description {
+
+    // &__margin {
+    //   margin-top: em(-160, $base-size);
+    // }
+    &__text--epic-boss-fights--title {
+      font-size: em(50, $base-size);
+    }
+    &__text--ton-of {
+      .title {
+        font-size: em(38, $base-size);
+      }
+    }
+
+    // Background for boss and boss image
+    &__boss {
+      height: em(94, $base-size);
+    }
+
+    &__image {
+      @include size(em(296, $base-size), em(283, $base-size));
+      margin-top: em(-105, $base-size);
+    }
+  }
+
+  .screenshot {
+
+    &--jeep {
+      top: em(-225, 10);
+    }
+    .arrows {
+      @include square(em(53, 10));
+      margin: em(18, 10);
+    }
+  }
+
+  /* Review-section */
+  .review__parallax {
+    &--height {
+      height: em(600, $base-size);
+      margin-top: em(-300, $base-size);
+    }
+  }
+  .review-parallax {
+    height: em(750, $base-size);
+    margin-top: em(-450, $base-size);
+  }
+
+  .review {
+    margin-top: em(-250, $base-size);
+
+    &__wrapper--contents {
+      padding-top: em(40, $base-size);
+    }
+
+    &__character {
+      width: em(780, $base-size);
+
+      &--tank {
+        @include size(em(401, $base-size), em(397, $base-size));
+        right: em(-177, $base-size);
+        top: em(-325, $base-size);
+      }
+    }
+  }
+
+  /*----------------- footer-section -----------------*/
+  .footer-section {
+    &__text {
+      padding-top: em(90, $base-size);
+      padding-bottom: em(380, $base-size);
+    }
+  }
+}

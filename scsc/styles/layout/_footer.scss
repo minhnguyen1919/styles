@@ -1,0 +1,30 @@
+/* Footer section
+_________________*/
+.footer-section {
+  @include bg-responsive("bg-footer.png");
+
+  @extend %bg-no-repeat;
+  @extend %text-center;
+  top: em(0, $base-size);
+  left: em(0, $base-size);
+
+  background-position: bottom center;
+
+  &__text {
+    &__title {
+      @include uppercase-title;
+      margin: 0;
+      text-decoration: underline;
+    }
+
+    &__email {
+      margin: 0;
+      padding-top: em(15, $base-size);
+    }
+    // Go to email link
+    .mailto {
+      @extend %cl-white;
+      @extend %text-decoration-none;
+    }
+  }
+}

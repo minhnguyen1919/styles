@@ -1,0 +1,52 @@
+/* Game-description */
+.game-description {
+  @include box-shadow($dark-gray-background 0 -50px 60px -33px);
+  @extend %relative;
+
+  max-width: 100%;
+
+  // Texture background
+  &--background {
+    @include bg-texture("texture.png");
+    border-top: em(15, $base-size) solid $section-border;
+  }
+
+  // Text content
+  &__text {
+
+    &--fun-challenge,
+    &--ton-of {
+      border-color: $description-border;
+      border-width: em(1, $base-size);
+    }
+
+    &--epic-boss-fights {
+      &--title {
+        margin: 0;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+  }
+
+  // Boss backgrond
+  &__boss {
+    @include bg-responsive("bg-boss.png");
+    @extend %bg-no-repeat;
+    @extend %clear-both;
+
+    width: 100%;
+    background-position: top center;
+  }
+
+  // Boss image
+  &__image {
+    @include bg-responsive("boss.png");
+    @extend %bg-no-repeat;
+    @extend %margin-center;
+  }
+}

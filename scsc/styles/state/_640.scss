@@ -1,0 +1,174 @@
+// Media screen size: 481px -640px
+@media (min-width: 481px) and (max-width: 640px) {
+  .introduction, .video-about, .screenshot {
+    font-size: 6px;
+  }
+
+  /*----------------- introduction -----------------*/
+  .introduction {
+
+    .sticky-header {
+
+      &--wrapper {
+        height: em(41, $base-size);
+        margin: 0 auto;
+        display: table;
+      }
+
+      &--text {
+        padding: em(13,25) em(10,25) em(10,25) em(10,25);
+      }
+
+      &--facebook {
+        margin-top: em(10, 6);
+      }
+
+    }
+
+    //app buttons block
+    &--app-wrapper {
+      @include size(em(360, 6), em(205, 6));
+      background-position: left em(35, 6);
+    }
+
+    &--app-store {
+      float: right;
+      clear: both;
+    }
+
+    .app-btn {
+      width: em(145, 6);
+      height: em(53, 6);
+    }
+  }
+
+  .video-about {
+
+    .about {
+
+      &--wrapper {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &--title {
+        font-size: em(44, 6);
+      }
+
+      &--text {
+        font-size: em(18, 6);
+      }
+    }
+  }
+
+  // /*screenhot slider */
+  .height-parallax {
+    height: em(370, $base-size);
+    margin-top: em(-150, $base-size);
+    padding-top: em(150, $base-size);
+  }
+
+  .screenshot {
+
+    &--container {
+      width: em(480,6);
+    }
+
+    .slick-arrow{
+      margin-top: em(130, 6);
+    }
+
+    .arrow-wrapper {
+      display: none;
+    }
+    .arrows {
+      @include square(em(32, 6));
+      margin: em(10.8, 6);
+    }
+  }
+
+  /*--------------- Game-description---------------------*/
+  .game-description {
+    // &__margin {
+    //   margin-top: em(-50, $base-size);
+    // }
+
+    .title {
+      @include uppercase-title;
+      font-size: em(50, $base-size);
+      padding-top: em(20, 44.27);
+    }
+
+    &__text {
+
+      > div {
+        flex: 1 100%;
+      }
+
+      &--fun-challenge {
+        order: 1;
+      }
+
+      &--epic-boss-fights {
+        order: 2;
+      }
+
+      &--ton-of {
+        order: 3;
+      }
+
+      &--fun-challenge, &--ton-of {
+        border-width: em(3, $base-size);
+      }
+
+      &--fun-challenge {
+        border-bottom-style: dashed;
+      }
+
+      &--ton-of {
+        border-top-style: dashed;
+      }
+
+      &--epic-boss-fights {
+        padding-top: em(15, $base-size);
+
+        &--title {
+          @include uppercase-title;
+          font-size: em(78.45, $base-size);
+        }
+      }
+    }
+  }
+
+  /*-------------------- review-section --------------------*/
+
+  /* Review-section */
+  .review__parallax {
+    &--height {
+      height: em(550, $base-size);
+      margin-top: em(-300, $base-size);
+    }
+  }
+  .review-parallax {
+    height: em(640, $base-size);
+    margin-top: em(-220, $base-size);
+
+    &--height {
+      height: em(700, $base-size);
+      margin-top: em(-220, $base-size);
+    }
+  }
+
+  .review {
+    margin-top: em(-300, $base-size);
+
+    &__character {
+      width: em(640, $base-size);
+    }
+  }
+
+  // Gear block
+  .gear-wrapper {
+    width: em(420, 6);
+  }
+}

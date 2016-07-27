@@ -1,0 +1,131 @@
+// Media screen size <= 480px
+@media screen and (max-width : 480px) {
+  .introduction, .video-about, .screenshot, .video--wrapper {
+    font-size: em(7, $base-size);
+  }
+
+  .video--wrapper {
+    font-size: em(6, 7);
+  }
+
+  /*----------------- introduction -----------------*/
+  .introduction {
+
+    .sticky-header {
+
+      &--wrapper {
+        height: em(41, $base-size);
+        display: table;
+        margin: 0 auto;
+      }
+
+
+      &--text {
+        font-size: em(26, 7);
+        line-height: em(17, 25);
+        padding: em(13,26) em(10,26) em(10,26) em(10,26);
+      }
+    }
+
+    // // App buttons block
+    &--app-wrapper {
+      @include size(em(373, 7), em(205, 7));
+      background-position: em(10, 7) em(35, 7);
+    }
+
+    &--app-store {
+      float: right;
+      clear: both;
+    }
+
+    .app-btn {
+      width: em(155, 7);
+      height: em(55, 7);
+    }
+  }
+
+
+  .video-about {
+
+    .about {
+
+      &--wrapper {
+        margin: em(35, 7) 0 em(40, 7) 0;
+      }
+
+      &--title {
+        font-size: em(44, 7);
+      }
+
+      &--text {
+        font-size: em(18, 7);
+      }
+    }
+
+    .soldier--wrapper {
+      display: none;
+    }
+  }
+
+  /* Screenhot slider */
+  .height-parallax {
+    // height: em(400, $base-size);
+    // margin-top: em(-180, $base-size);
+    // padding-top: em(180, $base-size);
+  }
+
+  .screenshot {
+    &__margin {
+      margin-top: em(-50, $base-size);
+    }
+
+    &--wrapper {
+      float: none;
+    }
+    .arrow-wrapper {
+      display: none !important;
+    }
+  }
+
+  /* Review-section */
+  .review__parallax {
+    &--height {
+      height: em(500, $base-size);
+      margin-top: em(-300, $base-size);
+    }
+  }
+  .review-parallax {
+    height: em(700, $base-size);
+    margin-top: em(-500, $base-size);
+  }
+
+  .review {
+    margin-top: em(-200, $base-size);
+  }
+
+  /*------------------- review-footer -------------------*/
+  .review-footer {
+    margin-top: em(-2, $base-size);
+  }
+
+  .game-description {
+    &__boss {
+      margin-top: em(-1, $base-size);
+    }
+
+    &__text {
+
+      &--fun-challenge, &--ton-of {
+        border-width: em(3, $base-size);
+      }
+
+      &--fun-challenge {
+        border-bottom-style: dashed;
+      }
+
+      &--ton-of {
+        border-top-style: dashed;
+      }
+    }
+  }
+}

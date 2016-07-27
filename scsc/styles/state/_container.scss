@@ -1,0 +1,12 @@
+@media screen and (min-width: 1281px) {
+  .container {
+    max-width: em(1294, $base-size);
+  }
+}
+
+// media screen max width 1280px
+@media screen and (max-width : 1280px) {
+  .container {
+    max-width: 90%;
+  }
+}

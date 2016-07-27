@@ -1,0 +1,9 @@
+/* Game description
+___________________*/
+ .game-description {
+  &__text {
+    @include flex(1 100%);
+    @include display-flex;
+    @include flex-flow(row wrap);
+  }
+}

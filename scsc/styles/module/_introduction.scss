@@ -1,0 +1,176 @@
+
+/* introduction
+_________________*/
+.introduction {
+  @extend %relative;
+  // height: em(707, $base-size);
+
+  /* Sticky header block
+  _________________*/
+  .sticky-header {
+    width: 100%;
+    z-index: 999;
+    margin-bottom: em(20, $base-size);
+
+    &--wrapper {
+      margin: em(22, $base-size) auto 0;
+      display: table;
+      height: 100%;
+    }
+
+    &--container {
+      @extend %float-left;
+      margin: auto;
+      background-color: $light-black;
+    }
+
+    &--border-left {
+      @include image("gear-border.png");
+      background-size: 100% 100%;
+      @extend %bg-no-repeat;
+      @extend %float-left;
+    }
+
+    &--border-right {
+      @include image("gear-border.png");
+      background-size: 100% 100%;
+      @include transform(rotate(180deg));
+      @extend %bg-no-repeat;
+      @extend %float-left;
+    }
+
+    &--text {
+      @include uppercase-title;
+      @extend %float-left;
+        font-size: em(60, $base-size);
+        line-height: em(50, 60);
+        padding: em(20,60) em(24,60) em(14,60) em(6,60);
+    }
+
+    &--facebook {
+      @include square(em(57, $base-size));
+      @include bg-svg("icon-facebook.svg");
+      @extend %bg-no-repeat;
+      @extend %bg-size-contain;
+      @extend %float-left;
+      @extend %bg-no-repeat;
+      margin-top: em(13, $base-size);
+      text-indent: em(-9999, $base-size);
+      padding-right: em(20, $base-size);
+    }
+
+    .facebook {
+      @include size(100%, 100%);
+      @extend %block;
+    }
+  }
+
+  &--background {
+    // @include size(100%, em(1200, $base-size));
+    @include bg-responsive("bg-introduction.jpg");
+    @include background-size(cover);
+    @extend %relative;
+    @extend %bg-no-repeat;
+    @extend %overflow-hidden;
+
+    width: 100%;
+  }
+
+  &--logo-wrapper {
+    @extend %margin-center;
+    @extend %relative;
+    @extend %overflow-hidden;
+    width: em(1028, $base-size);
+    z-index: 4;
+  }
+
+  &--logo-container,
+  &--profile-container {
+    @extend %float-left;
+  }
+
+  &--logo,
+  &--profile {
+    @include size(100%, 100%);
+
+    @extend %bg-no-repeat;
+    @extend %bg-size-contain;
+  }
+
+  &--logo {
+    @include bg-responsive("logo.png");
+    background-position: right bottom;
+    @extend %bg-no-repeat;
+    text-indent: -9999px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &--logo-container {
+    @include size(em(809, $base-size), em(345, $base-size));
+  }
+
+  &--profile {
+    @include bg-responsive("game-profile.png");
+    @extend %bg-no-repeat;
+  }
+
+  &--profile-container {
+    @include size(em(175, $base-size), em(175, $base-size));
+    margin-left: em(30, $base-size);
+    margin-top: em(160, $base-size);
+  }
+
+  //app buttons block
+  &--app-wrapper {
+    @include size(em(1028, $base-size), em(300, $base-size));
+    @include bg-responsive("general.png");
+    @extend %bg-no-repeat;
+    @extend %margin-center;
+    @extend %relative;
+    @extend %overflow-hidden;
+
+    background-position:46% bottom;
+    margin-top: em(-60, $base-size);
+  }
+  &--app-container {
+    margin-top: em(170, $base-size);
+  }
+
+  &--app-wrapper,
+  &--app-store,
+  &--blackberry-store {
+    @extend %bg-no-repeat;
+    @extend %bg-size-contain;
+  }
+
+  &--app-store {
+    @include bg-svg("btn-app-store.svg");
+    @extend %bg-no-repeat;
+    @extend %float-left;
+  }
+
+  &--blackberry-store {
+    @include bg-responsive("blackberry-app-world.png");
+    @extend %bg-no-repeat;
+    @extend %float-right;
+  }
+
+  .app-btn {
+    @include size(em(306, $base-size), em(93, $base-size));
+    text-indent: -9999px;
+    // margin-bottom: em(10, $base-size);
+
+    .app-link {
+      @include square(100%);
+      @extend %block;
+    }
+  }
+}
+// Create shake for Join-now text
+.join-now-animation {
+  @include animation-name("rotate");
+  @include animation-duration(1s);
+  @include animation-timing-function(linear);
+  @include animation-iteration-count(1);
+}
